@@ -1,4 +1,4 @@
-import { mainContainer, container, backgroundContainer } from './Login.module.scss';
+import { mainContainer, container, backgroundContainer, formContent } from './Login.module.scss';
 
 function LoginContainer({ children }) {
     return <main className={mainContainer}>
