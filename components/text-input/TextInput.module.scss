@@ -1,0 +1,43 @@
+.textInput {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    cursor: text;
+
+    label {
+        top: 50%;
+        translate: 0 -50%;
+        position: absolute;
+        padding: 0 .5rem;
+        border: 2px solid transparent;
+        transition: .2s ease-in-out;
+        font-weight: 500;
+        text-transform: uppercase;
+        pointer-events: none;
+        letter-spacing: .05rem;
+        color: #888;
+        border-radius: .5em;
+        background: #222;
+    }
+
+    input {
+        text-align: center !important;
+    }
+
+    &:has(input:focus) label {
+        border-left-color: #ff8020;
+        border-right-color: #ff8020;
+    }
+
+    &:has(input:valid:not(:focus)) label {
+        border-left-color: #888;
+        border-right-color: #888;
+    }
+
+    &:has(input:focus, input:valid) label {
+        top: 0;
+        font-size: .8em;
+        color: #ff8020;
+    }
+}
