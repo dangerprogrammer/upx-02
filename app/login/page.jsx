@@ -22,7 +22,7 @@ function LoginPage() {
         initializeLogin(setLogin);
     }, []);
 
-    return <LoginContainer>
+    return <LoginContainer setLogin={setLogin}>
         <div id="login-button"></div>
     </LoginContainer>
 };

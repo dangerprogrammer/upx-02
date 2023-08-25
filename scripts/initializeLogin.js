@@ -11,7 +11,7 @@ function responseLogin(credential, googleLoginButton, setLogin) {
     googleLoginButton.classList.add(loadingLogin);
 
     setLogin(data);
-    redirect('/');
+    return redirect('/');
 };
 
 function initializeLogin(setLogin) {

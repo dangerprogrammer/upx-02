@@ -4,7 +4,8 @@ import
     { mainContainer, container, backgroundContainer, formContent, inputsContainer, loginInput, submitButton }
     from './Login.module.scss';
 
-function LoginContainer({ children }) {
+function LoginContainer({ children, setLogin }) {
+
     return <main className={mainContainer}>
         <section className={container}>
             <span className={backgroundContainer}/>
@@ -13,7 +14,10 @@ function LoginContainer({ children }) {
                 <ul className={inputsContainer}>
                     <TextInput id='input-name' placeholder='Digite seu nome' className={loginInput}/>
                     <TextInput id='input-email' placeholder='Digite seu e-mail' className={loginInput}/>
-                    <input type="submit" value="Fazer Login" className={submitButton} onClick={verifyLogin}/>
+                    <button className={submitButton}
+                    // onClick={e => verifyLogin(e, setLogin)}
+                    onClick={() => console.log("Opa!")}
+                    >Fazer Login</button>
                 </ul>
                 { children }
             </article>
