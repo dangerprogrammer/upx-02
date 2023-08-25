@@ -25,7 +25,12 @@
 }
 
 .formContent {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2em;
+    color: #eee;
+    z-index: 10;
 }

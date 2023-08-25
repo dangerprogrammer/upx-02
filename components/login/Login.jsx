@@ -6,6 +6,7 @@ function LoginContainer({ children }) {
             <span className={backgroundContainer}/>
             <article className={formContent}>
                 <h1>Opa!</h1>
+                { children }
             </article>
         </section>
     </main>
