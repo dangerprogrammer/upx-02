@@ -1,14 +1,14 @@
 'use client';
 
+import { redirect } from "next/navigation";
 import { ContextApp } from "@/components/context/ContextApp";
-import { useRouter } from "next/navigation";
 import { useContext } from "react";
 
 
 function Home() {
-  const { login } = useContext(ContextApp), { replace } = useRouter();
+  const { login } = useContext(ContextApp);
 
-  replace('/login');
+  if (!login) return redirect('/login');
 
   return <div>Opa</div>
 };
