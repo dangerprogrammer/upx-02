@@ -12,7 +12,15 @@ function LoginPage() {
 
     if (login) return redirect('/');
 
-    useEffect(() => initializeLogin(setLogin), []);
+    useEffect(() => {
+        const userData = localStorage.getItem('user-data');
+        if (userData) {
+            setLogin(JSON.parse(userData));
+            return redirect('/');
+        };
+
+        initializeLogin(setLogin);
+    }, []);
 
     return <LoginContainer>
         <div id="login-button"></div>
