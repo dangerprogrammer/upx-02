@@ -1,3 +1,4 @@
+import '@/styles/global.scss';
 import ContextProvider from "@/components/context/ContextApp";
 
 const metadata = {

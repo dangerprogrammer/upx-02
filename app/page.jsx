@@ -15,6 +15,8 @@ function Home() {
       else return redirect('/login');
     };
   }, []);
+
+  if (!login) return redirect('/login');
   
   const { given_name } = login;
 
