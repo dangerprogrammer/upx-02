@@ -10,7 +10,9 @@ function Home() {
 
   if (!login) return redirect('/login');
 
-  return <div>Opa</div>
+  const { given_name } = login;
+
+  return <div>Opa, eae {given_name}!</div>
 };
 
 export default Home;

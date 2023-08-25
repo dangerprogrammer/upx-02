@@ -1,6 +1,9 @@
+'use client';
+
 import { ContextApp } from "@/components/context/ContextApp";
 import { redirect } from "next/navigation";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import initializeLogin from "@/scripts/initializeLogin";
 
 
 function LoginPage() {
@@ -8,7 +11,12 @@ function LoginPage() {
 
     if (login) return redirect('/');
 
-    return <div>Opa</div>
+    useEffect(() => {
+
+        initializeLogin(setLogin);
+    }, []);
+
+    return <div id="login-button"></div>
 };
 
 export default LoginPage;
