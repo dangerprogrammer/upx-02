@@ -13,6 +13,10 @@ export { metadata };
 function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+        <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+      </head>
       <body>
         <ContextProvider>
           {children}
