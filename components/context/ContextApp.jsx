@@ -5,7 +5,7 @@ import { useState, createContext, useEffect } from 'react';
 const ContextApp = createContext();
 
 function ContextProvider({ children }) {
-    const [ login, setLogin ] = useState(JSON.parse(localStorage.getItem('user-data'))),
+    const [ login, setLogin ] = useState(!1),
         [ userCategories, setUserCategories ] = useState([]),
         systemCategories = [
             { name: 'Celulares estragados', imagePath: '/img1.png', id: 'damaged-phones' }
