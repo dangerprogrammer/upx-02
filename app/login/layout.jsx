@@ -5,7 +5,9 @@ const metadata = {
 export { metadata };
 
 function RootLayout({ children }) {
-    return { children }
+    return <>
+        { children }
+    </>
 };
   
 export default RootLayout;
