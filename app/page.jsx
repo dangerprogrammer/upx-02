@@ -3,8 +3,9 @@
 import { redirect } from "next/navigation";
 import { ContextApp } from "@/components/context/ContextApp";
 import { useContext, useEffect } from "react";
+import Home from "@/components/home/Home";
 
-function Home() {
+function HomePage() {
   const { login, setLogin } = useContext(ContextApp);
 
   useEffect(() => {
@@ -16,11 +17,10 @@ function Home() {
     };
   }, []);
 
-  if (!login) return redirect('/login');
-  
-  const { given_name } = login;
+  // const testLogin = { given_name: 'Patrick', name: 'Patrick Vieira Léo', email: 'papatrileo@gmail.com' };
 
-  return <div>Opa, eae {given_name}!</div>
+  // return <Home { ...testLogin }/>
+  return <Home { ...login }/>
 };
 
-export default Home;
+export default HomePage;

@@ -26,8 +26,8 @@
     }
 
     &:has(input:focus) label {
-        border-left-color: #ff8020;
-        border-right-color: #ff8020;
+        border-left-color: #80ff80;
+        border-right-color: #80ff80;
     }
 
     &:has(input:valid:not(:focus)) label {
@@ -38,6 +38,6 @@
     &:has(input:focus, input:valid) label {
         top: 0;
         font-size: .8em;
-        color: #ff8020;
+        color: #80ff80;
     }
 }

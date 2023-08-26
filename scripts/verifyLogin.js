@@ -1,4 +1,5 @@
 function verifyLogin(setLogin) {
+    console.log("teste!");
     const inputName = document.querySelector('#input-name'), inputEmail = document.querySelector('#input-email'),
         name = inputName.value, email = inputEmail.value;
 

@@ -19,13 +19,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    filter: drop-shadow(0rem 0.25rem 1rem #0003);
 }
 
 .backgroundContainer {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: #222;
+    opacity: .5;
+    mix-blend-mode: color-dodge;
+    background: #1c1c1c;
     pointer-events: none;
 }
 
@@ -66,12 +69,12 @@
             transition: .2s ease;
 
             &:focus {
-                border-color: #ff8020;
+                border-color: #80ff80;
             }
         }
 
         .submitButton {
-            background: #fe7800;
+            background: #00ae00;
             color: #eee;
             padding: 1rem 2rem;
             border-radius: 1.25rem;
