@@ -6,12 +6,19 @@
     background-color: #222;
     color: #eee;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     .headerContainer {
         top: 0;
         width: 100%;
-        position: fixed;
+        position: sticky;
+        display: flex;
+        padding: 1em 2em;
+    }
+
+    .mainContent {
+        display: flex;
+        flex-direction: column;
     }
 }

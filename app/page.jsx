@@ -17,10 +17,10 @@ function HomePage() {
     };
   }, []);
 
-  // const testLogin = { given_name: 'Patrick', name: 'Patrick Vieira Léo', email: 'papatrileo@gmail.com' };
+  const testLogin = { given_name: 'Patrick', name: 'Patrick Vieira Léo', email: 'papatrileo@gmail.com' };
 
-  // return <Home { ...testLogin }/>
-  return <Home { ...login }/>
+  return <Home { ...testLogin }/>
+  // return <Home { ...login }/>
 };
 
 export default HomePage;
