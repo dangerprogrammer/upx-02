@@ -14,7 +14,43 @@
         width: 100%;
         position: sticky;
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 1em 2em;
+
+        .skipButton {
+            background: transparent;
+            color: #eee;
+            border-radius: 2rem;
+            padding: .35em 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 1.15em;
+            font-weight: 700;
+            cursor: pointer;
+            border: 2px solid #eee;
+            transition: .2s;
+            overflow: hidden;
+
+            &:hover {
+                background: #eee;
+                color: #111;
+                padding-right: 2.5em;
+
+                .arrow {
+                    opacity: 1;
+                }
+            }
+
+            .arrow {
+                position: absolute;
+                translate: 1.5em;
+                scale: 1.3;
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
     }
 
     .mainContent {

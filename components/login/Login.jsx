@@ -16,8 +16,8 @@ function LoginContainer({ children, setLogin }) {
             <article className={formContent}>
                 <h1>Faça login com seu nome ou entre com sua conta Google!</h1>
                 <ul className={inputsContainer}>
-                    <TextInput id='input-name' placeholder='Digite seu nome' className={loginInput}/>
-                    <TextInput id='input-email' placeholder='Digite seu e-mail' className={loginInput}/>
+                    <TextInput id='input-name' placeholder='Digite seu nome' type='text' className={loginInput}/>
+                    <TextInput id='input-email' placeholder='Digite seu e-mail' type='email' className={loginInput}/>
                     <button className={submitButton} onClick={() => verifyLogin(setLogin)}>Fazer Login</button>
                 </ul>
                 { children }

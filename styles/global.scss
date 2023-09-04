@@ -16,3 +16,11 @@ body {
     min-height: 100vh;
     font-size: clamp(.8rem, 2vw, 1rem);
 }
+
+svg {
+    font-size: 1em;
+    height: 1em;
+    width: 1em;
+    fill: currentColor;
+    stroke: currentColor;
+}
