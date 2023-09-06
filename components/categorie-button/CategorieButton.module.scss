@@ -1,5 +1,11 @@
 .categorieButton {
     position: relative;
+    cursor: pointer;
+    justify-content: space-around;
+
+    > * {
+        pointer-events: none;
+    }
 
     > div {
         position: relative;
@@ -14,5 +20,10 @@
             width: 100%;
             object-fit: cover;
         }
+    }
+
+    span {
+        font-weight: 800;
+        font-size: 1.1em;
     }
 };
