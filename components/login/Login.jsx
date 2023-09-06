@@ -3,7 +3,7 @@ import TextInput from '../text-input/TextInput';
 import
     { mainContainer, container, backgroundContainer, formContent, inputsContainer, loginInput, submitButton }
     from './Login.module.scss';
-// import Image from 'next/image';
+import Image from 'next/image';
 import recycleWallpaper from '@/public/imgs/recycle-wallpaper.jpeg';
 
 function LoginContainer({ children, setLogin }) {
