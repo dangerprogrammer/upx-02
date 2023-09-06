@@ -51,19 +51,6 @@
             gap: .5rem;
             max-width: 75rem;
             width: 100%;
-
-            > * {
-                width: 100%;
-                border-radius: 1.5rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 1em 2em;
-                overflow: hidden;
-                aspect-ratio: 9 / 11;
-                list-style: none;
-                background: #f003;
-            }
         }
     }
 
