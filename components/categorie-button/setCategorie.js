@@ -1,9 +1,9 @@
 import { activedCategorie } from './CategorieButton.module.scss';
 
 function setCategorie({ id, classList }, { userCategories, setUserCategories }) {
-    const cloneCategories = [...userCategories], hasActived = !cloneCategories.find(categorie => categorie == id);
+    const cloneCategories = [...userCategories], hasActived = cloneCategories.find(categorie => categorie == id);
 
-    classList.toggle(activedCategorie, hasActived);
+    classList[hasActived ? 'add' : 'remove'](activedCategorie, hasActived);
     if (hasActived) {
         if (cloneCategories.indexOf(id) === -1) cloneCategories.push(id);
     } else do cloneCategories.splice(cloneCategories.indexOf(id), 1);
