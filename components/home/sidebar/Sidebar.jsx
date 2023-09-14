@@ -5,7 +5,7 @@ import CategorieButton from '@/components/categorie-button/CategorieButton';
 import scrollCategories from '@/scripts/scrollCategories';
 import { useEffect } from 'react';
 
-function Sidebar({ given_name, ...categories }) {
+function Sidebar({ given_name, userCategories, setUserCategories }) {
     useEffect(() => scrollCategories(!0), []);
 
     return <aside className={`${sidebarContainer} ${showCategories}`}>
@@ -14,7 +14,7 @@ function Sidebar({ given_name, ...categories }) {
         </header>
         <main className={mainContent}>
             <ul className={gridCategories}>
-                {systemCategories.map(({ ...props }, ind) => <CategorieButton key={ind} { ...props } { ...categories }/>)}
+                {systemCategories.map(({ ...props }, ind) => <CategorieButton key={ind} { ...props } userCategories={userCategories} setUserCategories={setUserCategories}/>)}
             </ul>
         </main>
         <footer className={footerContainer}>
