@@ -6,7 +6,7 @@ import { useContext, useEffect } from "react";
 import Home from "@/components/home/Home";
 
 function HomePage() {
-  const { login, setLogin } = useContext(ContextApp);
+  const { login, setLogin, userCategories, setUserCategories } = useContext(ContextApp);
 
   useEffect(() => {
     const userData = localStorage.getItem('user-data');
@@ -20,7 +20,7 @@ function HomePage() {
   const testLogin = { given_name: 'Patrick', name: 'Patrick Vieira Léo', email: 'papatrileo@gmail.com' };
 
   // return <Home { ...testLogin }/>
-  return <Home { ...login }/>
+  return <Home { ...login } {...[userCategories, setUserCategories]}/>
 };
 
 export default HomePage;

@@ -3,7 +3,7 @@ import { activedCategorie } from './CategorieButton.module.scss';
 import { ContextApp } from '../context/ContextApp';
 
 function setCategorie({ id, classList }) {
-    const { userCategories, setUserCategories } = useContext(ContextApp)
+    // const { userCategories, setUserCategories } = useContext(ContextApp)
     // , cloneCategories = [...userCategories];
     const hasActived = classList.toggle(activedCategorie);
 
