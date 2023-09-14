@@ -85,6 +85,7 @@
             cursor: pointer;
             transition: .2s ease-in-out;
             text-transform: uppercase;
+            overflow: hidden;
             z-index: 100;
 
             &:hover {
@@ -92,6 +93,19 @@
                 letter-spacing: .35rem;
                 border-color: #00ff80;
                 box-shadow: 0 .2rem .8rem #00ff8090;
+            }
+
+            > * {
+                pointer-events: none;
+            }
+
+            .palmStyles {
+                position: absolute;
+
+                img {
+                    height: 1em;
+                    width: 1em;
+                }
             }
         }
     }

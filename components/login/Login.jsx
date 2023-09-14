@@ -1,9 +1,10 @@
 import verifyLogin from '@/scripts/verifyLogin';
 import TextInput from '../text-input/TextInput';
 import
-    { mainContainer, container, backgroundContainer, formContent, inputsContainer, loginInput, submitButton }
+    { mainContainer, container, backgroundContainer, formContent, inputsContainer, loginInput, submitButton, palmStyles }
     from './Login.module.scss';
 // import Image from 'next/image';
+// import palm from '@/public/imgs/palm.png';
 // import recycleWallpaper from '@/public/imgs/recycle-wallpaper.jpeg';
 
 function LoginContainer({ children, setLogin }) {
@@ -20,6 +21,9 @@ function LoginContainer({ children, setLogin }) {
                     <TextInput id='input-email' placeholder='Digite seu e-mail' type='email' className={loginInput}/>
                     <button className={submitButton} onClick={() => verifyLogin(setLogin)}>
                         <span>Fazer Login</span>
+                        <div className={palmStyles}>
+                            {/* <Image alt='' src={palm}/> */}
+                        </div>
                     </button>
                 </ul>
                 { children }
