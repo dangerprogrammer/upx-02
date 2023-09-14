@@ -1,8 +1,10 @@
-import { categorieButton } from './CategorieButton.module.scss';
+import { categorieButton, activedCategorie } from './CategorieButton.module.scss';
 import setCategorie from './setCategorie';
 
 function CategorieButton({ name, ImageCategorie, id, userCategories, setUserCategories }) {
-    return <li className={categorieButton} id={id} onClick={({ target }) => setCategorie(target, { userCategories, setUserCategories })}>
+    const isActived = userCategories.find(categorie => categorie === id), text = isActived ? ` ${isActived}` : '';
+
+    return <li className={`${categorieButton}${text}`} id={id} onClick={({ target }) => setCategorie(target, { userCategories, setUserCategories })}>
         <div>
             <ImageCategorie/>
         </div>
