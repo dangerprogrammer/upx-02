@@ -6,12 +6,10 @@ function setCategorie({ id }) {
     const { userCategories, setUserCategories } = useContext(ContextApp);
     const hasActived = elem.classList.toggle(activedCategorie);
 
-    setUserCategories(() => {
-        if (hasActived) userCategories.push(id);
-        else userCategories.splice(userCategories.indexOf(id), 1);
+    if (hasActived) userCategories.push(id);
+    else userCategories.splice(userCategories.indexOf(id), 1);
 
-        return userCategories;
-    });
+    setUserCategories(userCategories);
 
     console.log(userCategories);
 };
