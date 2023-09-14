@@ -7,7 +7,7 @@ const ContextApp = createContext();
 
 function ContextProvider({ children }) {
     const [ login, setLogin ] = useState(!1),
-        [ userCategories, setUserCategories ] = useState(systemCategories[0]),
+        [ userCategories, setUserCategories ] = useState([]),
         values = { login, setLogin, userCategories, setUserCategories, systemCategories };
 
     return <ContextApp.Provider value={values}>
