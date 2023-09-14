@@ -5,7 +5,8 @@ function setCategorie({ id, classList }, { userCategories, setUserCategories }) 
         hasActived = classList.toggle(activedCategorie);
 
     if (hasActived) cloneCategories.push(id);
-    else cloneCategories.splice(cloneCategories.indexOf(id), 1);
+    else do cloneCategories.splice(cloneCategories.indexOf(id), 1);
+    while (cloneCategories.indexOf(id) !== -1);
 
     localStorage.setItem('user-categories', JSON.stringify(cloneCategories));
     setUserCategories(cloneCategories);
