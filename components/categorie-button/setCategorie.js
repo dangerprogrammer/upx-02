@@ -8,7 +8,7 @@ function setCategorie({ id, classList }, { userCategories, setUserCategories }) 
     else cloneCategories.splice(cloneCategories.indexOf(id), 1);
 
     console.log(cloneCategories);
-    // setUserCategories(cloneCategories);
+    setUserCategories(cloneCategories);
 };
 
 export default setCategorie;
