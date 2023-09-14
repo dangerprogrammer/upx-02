@@ -13,6 +13,7 @@
     list-style: none;
     background: #ddda;
     transition: .2s ease-in-out;
+    user-select: none;
 
     &.activedCategorie {
         background: #00ff80;
@@ -28,7 +29,6 @@
         overflow: hidden;
 
         img {
-            position: absolute;
             height: 100%;
             width: 100%;
             object-fit: cover;
