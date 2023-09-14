@@ -12,6 +12,11 @@
     aspect-ratio: 9 / 11;
     list-style: none;
     background: #ddda;
+    transition: .2s ease-in-out;
+
+    &.activedCategorie {
+        background: #00ff80;
+    }
 
     > * {
         pointer-events: none;

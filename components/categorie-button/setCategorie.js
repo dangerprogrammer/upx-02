@@ -1,7 +1,7 @@
-import {} from './CategorieButton.module.scss';
+import { activedCategorie } from './CategorieButton.module.scss';
 
 function setCategorie(elem) {
-    console.log(elem);
+    elem.classList.toggle(activedCategorie);
 };
 
 export default setCategorie;
