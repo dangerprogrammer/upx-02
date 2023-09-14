@@ -10,7 +10,7 @@ function Sidebar({ given_name }) {
 
     return <aside className={`${sidebarContainer} ${showCategories}`}>
         <header className={headerContainer}>
-            <h1>Selecione as categorias de seu interesse</h1>
+            <h1>{ given_name }, selecione as categorias de seu interesse</h1>
         </header>
         <main className={mainContent}>
             <ul className={gridCategories}>
