@@ -1,10 +1,10 @@
-import { useContext } from 'react';
+// import { useContext } from 'react';
 import { categorieButton, activedCategorie } from './CategorieButton.module.scss';
 import setCategorie from './setCategorie';
-import { ContextApp } from '../context/ContextApp';
+// import { ContextApp } from '../context/ContextApp';
 
 function CategorieButton({ name, ImageCategorie, id }) {
-    const { userCategories } = useContext(ContextApp)/*, findedCategorie = userCategories.find(categorie => categorie == id),
+    /*const { userCategories } = useContext(ContextApp), findedCategorie = userCategories.find(categorie => categorie == id),
         text = findedCategorie ? ` ${findedCategorie}` : '';*/
     const text = '';
 
