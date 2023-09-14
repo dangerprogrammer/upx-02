@@ -18,7 +18,9 @@ function LoginContainer({ children, setLogin }) {
                 <ul className={inputsContainer}>
                     <TextInput id='input-name' placeholder='Digite seu nome' type='text' className={loginInput}/>
                     <TextInput id='input-email' placeholder='Digite seu e-mail' type='email' className={loginInput}/>
-                    <button className={submitButton} onClick={() => verifyLogin(setLogin)}>Fazer Login</button>
+                    <button className={submitButton} onClick={() => verifyLogin(setLogin)}>
+                        <span>Fazer Login</span>
+                    </button>
                 </ul>
                 { children }
             </article>

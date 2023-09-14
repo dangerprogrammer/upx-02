@@ -74,15 +74,25 @@
         }
 
         .submitButton {
-            background: #00ae00;
+            background: transparent;
+            border: 2px solid #00ae00;
             color: #eee;
             padding: 1rem 2rem;
-            border-radius: 1.25rem;
+            border-radius: .75rem;
             font-size: 1.2em;
             font-weight: 800;
             letter-spacing: 0.05rem;
             cursor: pointer;
+            transition: .2s ease-in-out;
+            text-transform: uppercase;
             z-index: 100;
+
+            &:hover {
+                border-radius: 1.25rem;
+                letter-spacing: .35rem;
+                border-color: #00ff80;
+                box-shadow: 0 .2rem .8rem #00ff8090;
+            }
         }
     }
 }
