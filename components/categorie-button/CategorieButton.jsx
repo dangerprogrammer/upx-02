@@ -6,7 +6,7 @@ import { ContextApp } from '../context/ContextApp';
 function CategorieButton({ name, ImageCategorie, id }) {
     const { userCategories } = useContext(ContextApp)/*, findedCategorie = userCategories.find(categorie => categorie == id),
         text = findedCategorie ? ` ${findedCategorie}` : '';*/
-    text = '';
+    const text = '';
 
     return <li className={`${categorieButton}${text}`} id={id} onClick={({ target }) => setCategorie(target)}>
         <div>
