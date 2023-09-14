@@ -9,9 +9,11 @@ function setCategorie({ id }) {
     setUserCategories(() => {
         if (hasActived) userCategories.push(id);
         else userCategories.splice(userCategories.indexOf(id), 1);
-        
+
         return userCategories;
     });
+
+    console.log(userCategories);
 };
 
 export default setCategorie;
