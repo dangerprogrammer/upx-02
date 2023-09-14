@@ -1,8 +1,8 @@
 import { categorieButton } from './CategorieButton.module.scss';
 import setCategorie from './setCategorie';
 
-function CategorieButton({ name, ImageCategorie, id }) {
-    return <li className={categorieButton} id={id} onClick={({ target }) => setCategorie(target)}>
+function CategorieButton({ name, ImageCategorie, id, ...categories }) {
+    return <li className={categorieButton} id={id} onClick={({ target }) => setCategorie(target, { ...categories })}>
         <div>
             <ImageCategorie/>
         </div>

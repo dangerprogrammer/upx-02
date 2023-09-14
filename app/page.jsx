@@ -20,8 +20,7 @@ function HomePage() {
   const testLogin = { given_name: 'Patrick', name: 'Patrick Vieira Léo', email: 'papatrileo@gmail.com' };
 
   // return <Home { ...testLogin }/>
-  console.log(userCategories);
-  return <Home { ...login } {...[userCategories, setUserCategories]}/>
+  return <Home { ...login } userCategories={userCategories} setUserCategories={setUserCategories}/>
 };
 
 export default HomePage;

@@ -2,12 +2,12 @@ import { useContext } from 'react';
 import { activedCategorie } from './CategorieButton.module.scss';
 import { ContextApp } from '../context/ContextApp';
 
-function setCategorie({ id, classList }) {
+function setCategorie({ id, classList }, { userCategories, setUserCategories }) {
     // const { userCategories, setUserCategories } = useContext(ContextApp)
     // , cloneCategories = [...userCategories];
     const hasActived = classList.toggle(activedCategorie);
 
-    console.log(hasActived);
+    console.log(userCategories);
 
     // if (hasActived) cloneCategories.push(id);
     // else cloneCategories.splice(cloneCategories.indexOf(id), 1);
