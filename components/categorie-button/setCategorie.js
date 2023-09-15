@@ -15,6 +15,8 @@ function setCategorie({ id, classList }, { userCategories, setUserCategories }) 
 
     localStorage.setItem('user-categories', JSON.stringify(cloneCategories));
     setUserCategories(cloneCategories);
+    
+    classList[cloneCategories.indexOf(id) === -1 ? 'add' : 'remove'](activedCategorie);
 };
 
 export default setCategorie;
