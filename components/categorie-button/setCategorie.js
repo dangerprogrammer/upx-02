@@ -4,13 +4,17 @@ function setCategorie({ id, classList }, { userCategories, setUserCategories }) 
     const cloneCategories = [...userCategories], hasActived = classList.toggle(activedCategorie);
 
     if (hasActived) {
-        if (cloneCategories.indexOf(id) === -1) cloneCategories.push(id);
-    } else cloneCategories.splice(cloneCategories.indexOf(id), 1);
+        if (cloneCategories.indexOf(id) === -1) {
+            cloneCategories.push(id);
+            classList.add(activedCategorie);
+        };
+    } else {
+        cloneCategories.splice(cloneCategories.indexOf(id), 1);
+        classList.remove(activedCategorie);
+    };
 
     localStorage.setItem('user-categories', JSON.stringify(cloneCategories));
     setUserCategories(cloneCategories);
-
-    classList.toggle(activedCategorie, hasActived);
 };
 
 export default setCategorie;
