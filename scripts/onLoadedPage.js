@@ -1,4 +1,4 @@
-function onLoadedPage({ login, setLogin, userCategories, setUserCategories }) {
+function onLoadedPage({ login, setLogin, setUserCategories, redirect }) {
     const userData = localStorage.getItem('user-data'), categoriesUser = localStorage.getItem('user-categories');
 
     if (!login) {

@@ -9,7 +9,7 @@ onLoadedPage
 function HomePage() {
   const { login, setLogin, userCategories, setUserCategories } = useContext(ContextApp);
 
-  useEffect(() => onLoadedPage({ login, setLogin, userCategories, setUserCategories }), []);
+  useEffect(() => onLoadedPage({ login, setLogin, setUserCategories, redirect }), []);
 
   const testLogin = { given_name: 'Patrick', name: 'Patrick Vieira Léo', email: 'papatrileo@gmail.com' };
 
