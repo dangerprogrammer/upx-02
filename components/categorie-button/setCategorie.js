@@ -1,15 +1,16 @@
 import { activedCategorie } from './CategorieButton.module.scss';
 
 function setCategorie({ id, classList }, { userCategories, setUserCategories }) {
-    const cloneCategories = [...userCategories], hasActived = classList[classList.contains(activedCategorie) ? 'remove' : 'add'](activedCategorie);
+    const cloneCategories = [...userCategories], hasActived = classList.toggle(activedCategorie);
 
-    console.log(classList.contains(activedCategorie));
     if (hasActived) {
         if (cloneCategories.indexOf(id) === -1) cloneCategories.push(id);
     } else cloneCategories.splice(cloneCategories.indexOf(id), 1);
 
     localStorage.setItem('user-categories', JSON.stringify(cloneCategories));
     setUserCategories(cloneCategories);
+
+    classList.toggle(activedCategorie, hasActived);
 };
 
 export default setCategorie;
