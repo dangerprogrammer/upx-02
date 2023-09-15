@@ -6,7 +6,7 @@ import scrollCategories from '@/scripts/scrollCategories';
 import { useEffect } from 'react';
 
 function Sidebar({ given_name, userCategories, setUserCategories }) {
-    useEffect(() => scrollCategories(!userCategories.length), []);
+    useEffect(() => scrollCategories(userCategories.length), []);
 
     return <aside className={`${sidebarContainer} ${showCategories}`}>
         <header className={headerContainer}>
