@@ -1,9 +1,7 @@
 import { activedCategorie } from './CategorieButton.module.scss';
 
 function setCategorie({ id, classList }, { userCategories, setUserCategories }) {
-    const cloneCategories = [...userCategories];
-    const hasActived = classList.toggle(activedCategorie);
-    // const hasActived = classList.contains(activedCategorie);
+    const cloneCategories = [...userCategories], hasActived = classList.toggle(activedCategorie);
     console.log(hasActived);
     // if (hasActived) {
     //     if (cloneCategories.indexOf(id) === -1) cloneCategories.push(id);
