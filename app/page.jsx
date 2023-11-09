@@ -5,7 +5,7 @@ import { ContextApp } from "@/components/context/ContextApp";
 import { useContext, useEffect } from "react";
 import Home from "@/components/home/Home";
 import onLoadedPage from "@/scripts/onLoadedPage";
-onLoadedPage
+
 function HomePage() {
   const { login, setLogin, userCategories, setUserCategories } = useContext(ContextApp);
 

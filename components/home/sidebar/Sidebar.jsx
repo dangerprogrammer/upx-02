@@ -14,7 +14,9 @@ function Sidebar({ given_name, userCategories, setUserCategories }) {
         </header>
         <main className={mainContent}>
             <ul className={gridCategories}>
-                {systemCategories.map(({ ...props }, ind) => <CategorieButton key={ind} { ...props } userCategories={userCategories} setUserCategories={setUserCategories}/>)}
+                {systemCategories.map(({ ...props }, ind) =>
+                    <CategorieButton key={ind} { ...props } userCategories={userCategories} setUserCategories={setUserCategories}/>
+                )}
             </ul>
         </main>
         <footer className={footerContainer}>
