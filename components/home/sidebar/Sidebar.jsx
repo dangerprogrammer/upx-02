@@ -3,13 +3,12 @@ import { sidebarContainer, showCategories, headerContainer, mainContent, skipBut
 import ArrowForward from '@/assets/svgs/arrow-forward-outline.svg';
 import CategorieButton from '@/components/categorie-button/CategorieButton';
 import { useEffect } from 'react';
-import setFunctionsLater from '@/scripts/setFunctionsLater';
 import scrollCategories from '@/scripts/scrollCategories';
 
 function Sidebar({ given_name, userCategories, setUserCategories, setLaterFunctions }) {
     useEffect(() => {
         console.log(userCategories);
-        if (userCategories) setFunctionsLater({ userCategories }, { setLaterFunctions });
+        if (userCategories) setLaterFunctions(lFunctions => [...lFunctions, () => scrollCategories(!userCategories.length)]);
     }, []);
 
     return <aside className={`${sidebarContainer} ${showCategories}`}>
