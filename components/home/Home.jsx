@@ -2,9 +2,9 @@ import { homeContainer } from './Home.module.scss';
 import MainContent from './main-content/MainContent';
 import Sidebar from './sidebar/Sidebar';
 
-function Home({ userCategories, setUserCategories, ...login }) {
+function Home({ userCategories, setUserCategories, ...contexts }) {
     return <main className={homeContainer}>
-        <Sidebar { ...login } userCategories={userCategories} setUserCategories={setUserCategories}/>
+        <Sidebar { ...contexts } userCategories={userCategories} setUserCategories={setUserCategories}/>
         <MainContent />
     </main>
 };

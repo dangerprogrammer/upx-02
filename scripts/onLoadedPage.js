@@ -1,4 +1,6 @@
-function onLoadedPage({ login, setLogin, setUserCategories, redirect }) {
+import { redirect } from "next/navigation";
+
+function onLoadedPage({ login, setLogin, setUserCategories, laterFunctions }) {
     const userData = localStorage.getItem('user-data'), categoriesUser = localStorage.getItem('user-categories');
 
     if (!login) {
@@ -6,7 +8,11 @@ function onLoadedPage({ login, setLogin, setUserCategories, redirect }) {
       else return redirect('/login');
     };
 
-    if (categoriesUser) setUserCategories(JSON.parse(categoriesUser));
+    if (categoriesUser) {
+      setUserCategories(JSON.parse(categoriesUser));
+
+      laterFunctions.map(lFunc => lFunc());
+    };
 };
 
 export default onLoadedPage;
