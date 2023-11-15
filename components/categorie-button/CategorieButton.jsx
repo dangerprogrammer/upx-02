@@ -1,5 +1,6 @@
-import { categorieButton, activedCategorie } from './CategorieButton.module.scss';
+import { categorieButton, activedCategorie, verifyed } from './CategorieButton.module.scss';
 import setCategorie from './setCategorie';
+import Checkmark from '@/assets/svgs/checkmark-outline.svg';
 
 function CategorieButton({ name, ImageCategorie, id, userCategories, setUserCategories }) {
     const isActived = userCategories.find(categorie => categorie === id), text = isActived ? ` ${activedCategorie}` : '';
@@ -9,6 +10,9 @@ function CategorieButton({ name, ImageCategorie, id, userCategories, setUserCate
             <ImageCategorie/>
         </div>
         <span>{name}</span>
+        <div className={verifyed}>
+            <Checkmark/>
+        </div>
     </li>
 };
 

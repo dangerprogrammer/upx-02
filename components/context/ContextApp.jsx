@@ -2,6 +2,8 @@
 
 import { useState, createContext } from 'react';
 import systemCategories from './systemCategories';
+import productsList from './productsList';
+
 
 const ContextApp = createContext();
 
@@ -11,7 +13,8 @@ function ContextProvider({ children }) {
         values = {
             login, setLogin,
             userCategories, setUserCategories,
-            systemCategories
+            systemCategories,
+            productsList
         },
         { Provider } = ContextApp;
 

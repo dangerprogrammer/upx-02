@@ -27,8 +27,12 @@
     outline: 4px solid transparent;
 
     &:has(.searchbar:focus) {
-        outline-color: #08f3;
-        border-color: #08f;
+        outline-color: #0af3;
+        border-color: #0af;
+
+        .searchIcon {
+            color: #0af;
+        }
     }
 }
 
@@ -51,6 +55,7 @@
     position: absolute;
     flex-shrink: 0;
     display: flex;
+    transition: color .2s ease;
     align-items: center;
     justify-content: center;
     font-size: 2.5em;

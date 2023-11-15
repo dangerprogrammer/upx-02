@@ -8,22 +8,44 @@
     flex-direction: column;
     align-items: center;
     padding: 1em 2em;
-    overflow: hidden;
     aspect-ratio: 9 / 11;
     list-style: none;
     background: #ddda;
     transition: .2s ease-in-out;
     user-select: none;
+    outline: .3rem solid transparent;
+    scale: .97;
 
     &.activedCategorie {
-        background: #00ff80;
+        outline-color: #08f;
+
+        > .verifyed {
+            opacity: 1;
+        }
     }
 
     > * {
         pointer-events: none;
     }
 
-    > div {
+    > .verifyed {
+        position: absolute;
+        height: 2rem;
+        width: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3em;
+        bottom: 0;
+        transition: .2s ease-in-out;
+        translate: 0 calc(50% + .1rem);
+        background: #08f;
+        border-radius: 50%;
+        color: #fff;
+        opacity: 0;
+    }
+
+    > div:not([class]) {
         position: relative;
         width: 80%;
         overflow: hidden;

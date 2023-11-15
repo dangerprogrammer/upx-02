@@ -5,7 +5,7 @@ import Sidebar from './sidebar/Sidebar';
 function Home({ given_name, ...contexts }) {
     return given_name ? <main className={homeContainer}>
         <Sidebar {...{...contexts, given_name}}/>
-        <MainContent />
+        <MainContent { ...contexts }/>
     </main> : <span className={loadingContainer}>
         <div className={loading}>
             <span style={{'--ind': 0}}></span>
