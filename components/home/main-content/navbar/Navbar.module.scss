@@ -1,8 +1,42 @@
 .navbar {
     top: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     position: sticky;
-    background: red;
+    background: linear-gradient(to top, transparent, #eee);
     padding: .5em 2em;
+}
+
+.searchbarContainer {
+    background: white;
+    border-radius: 3em;
+    width: 100%;
+    font-size: 1.1em;
+    max-width: 30rem;
+    margin-inline: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchbar {
+    display: flex;
+    outline: none !important;
+    border: none;
+    padding: .6em 1.5em;
+    padding-left: 3.1em;
+    background: transparent;
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: left;
+}
+
+.searchIcon {
+    position: ãbsolute;
+    flex-shrink: 0;
+    font-size: 2.5em;
+    padding: .2em;
 }
