@@ -1,7 +1,7 @@
-import { product } from './Product.module.scss';
+import { productStyles } from './Product.module.scss';
 
-function Product({}) {
-    return <li className={product}>Produto!</li>
+function Product({categorie, product: {name, desc, price}, user, local}) {
+    return <li className={productStyles}>Produto!</li>
 };
 
 export default Product;
