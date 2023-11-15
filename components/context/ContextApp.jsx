@@ -8,19 +8,16 @@ const ContextApp = createContext();
 function ContextProvider({ children }) {
     const [ login, setLogin ] = useState(!1),
         [ userCategories, setUserCategories ] = useState([]),
-        [ showSidebar, setShowSidebar ] = useState(!0),
-        [ laterFunctions, setLaterFunctions ] = useState([]),
         values = {
             login, setLogin,
             userCategories, setUserCategories,
-            systemCategories,
-            showSidebar, setShowSidebar,
-            laterFunctions, setLaterFunctions
-        };
+            systemCategories
+        },
+        Provider = ContextApp.Provider;
 
-    return <ContextApp.Provider value={values}>
+    return <Provider value={values}>
         {children}
-    </ContextApp.Provider>
+    </Provider>
 };
 
 export {ContextApp};

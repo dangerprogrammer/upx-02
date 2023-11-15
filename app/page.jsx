@@ -6,9 +6,9 @@ import Home from "@/components/home/Home";
 import onLoadedPage from "@/scripts/onLoadedPage";
 
 function HomePage() {
-  const { login, setLogin, setUserCategories, laterFunctions, ...contexts } = useContext(ContextApp);
+  const { login, setLogin, setUserCategories, ...contexts } = useContext(ContextApp);
 
-  useEffect(() => onLoadedPage({ login, setLogin, setUserCategories, laterFunctions }), []);
+  useEffect(() => onLoadedPage({ login, setLogin, setUserCategories }), []);
 
   const testLogin = { given_name: 'Patrick', name: 'Patrick Vieira Léo', email: 'papatrileo@gmail.com' };
 

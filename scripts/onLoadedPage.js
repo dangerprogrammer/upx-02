@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-function onLoadedPage({ login, setLogin, setUserCategories, laterFunctions }) {
+function onLoadedPage({ login, setLogin, setUserCategories }) {
     const userData = localStorage.getItem('user-data'), categoriesUser = localStorage.getItem('user-categories');
 
     if (!login) {
@@ -10,8 +10,6 @@ function onLoadedPage({ login, setLogin, setUserCategories, laterFunctions }) {
 
     if (categoriesUser) {
       setUserCategories(JSON.parse(categoriesUser));
-
-      laterFunctions.map(lFunc => lFunc());
     };
 };
 

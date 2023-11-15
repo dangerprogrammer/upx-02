@@ -5,11 +5,12 @@ import CategorieButton from '@/components/categorie-button/CategorieButton';
 import { useEffect } from 'react';
 import scrollCategories from '@/scripts/scrollCategories';
 
-function Sidebar({ given_name, userCategories, setUserCategories, setLaterFunctions }) {
+function Sidebar({ given_name, userCategories, setUserCategories }) {
     useEffect(() => {
-        console.log(userCategories);
-        if (userCategories) setLaterFunctions(lFunctions => [...lFunctions, () => scrollCategories(!userCategories.length)]);
-    }, []);
+        if (!given_name) return; 
+
+        scrollCategories(!userCategories.length);
+    }, [given_name]);
 
     return <aside className={`${sidebarContainer} ${showCategories}`}>
         <header className={headerContainer}>
