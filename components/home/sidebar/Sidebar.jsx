@@ -19,7 +19,7 @@ function Sidebar({ given_name, userCategories, setUserCategories }) {
         <main className={mainContent}>
             <ul className={gridCategories}>
                 {systemCategories.map(({ ...props }, ind) =>
-                    <CategorieButton key={ind} { ...props } userCategories={userCategories} setUserCategories={setUserCategories}/>
+                    <CategorieButton key={ind} {...{...props, userCategories, setUserCategories}}/>
                 )}
             </ul>
         </main>

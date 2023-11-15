@@ -10,9 +10,6 @@ function HomePage() {
 
   useEffect(() => onLoadedPage({ login, setLogin, setUserCategories }), []);
 
-  const testLogin = { given_name: 'Patrick', name: 'Patrick Vieira Léo', email: 'papatrileo@gmail.com' };
-
-  // return <Home { ...testLogin }/>
   return <Home { ...login } setUserCategories={setUserCategories} { ...contexts }/>
 };
 

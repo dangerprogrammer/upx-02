@@ -6,3 +6,48 @@
     background: #eee;
     overflow: hidden;
 }
+
+.loadingContainer {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.loading {
+    position: relative;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+
+    span:first-child {
+        border-top-color: #08f;
+    }
+    
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: .2em solid transparent;
+        border-top-color: #08f6;
+
+        animation: rotate 1.5s calc(.5s + .1s * var(--ind)) ease infinite;
+    }
+}
+
+@keyframes rotate {
+    to {
+        rotate: 1turn;
+    }
+}

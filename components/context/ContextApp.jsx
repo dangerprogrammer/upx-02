@@ -13,7 +13,7 @@ function ContextProvider({ children }) {
             userCategories, setUserCategories,
             systemCategories
         },
-        Provider = ContextApp.Provider;
+        { Provider } = ContextApp;
 
     return <Provider value={values}>
         {children}

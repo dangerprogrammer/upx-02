@@ -1,8 +1,11 @@
-import { footerStyles } from './Footer.module.scss';
+import scrollCategories from '@/scripts/scrollCategories';
+import { footerStyles, backCategories, arrow } from './Footer.module.scss';
+import ArrowBack from '@/assets/svgs/arrow-back-outline.svg';
 
 function Footer() {
-    console.log(footerStyles, 'a');
-    return <input></input>
+    return <footer className={footerStyles}>
+        <button className={backCategories} onClick={() => scrollCategories(!0)}>Voltar<ArrowBack className={arrow}/></button>
+    </footer>
 };
 
 export default Footer;

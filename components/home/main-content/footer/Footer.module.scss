@@ -2,6 +2,43 @@
     bottom: 0;
     display: flex;
     width: 100%;
-    position: sticky;
+    position: absolute;
     padding: 1em;
+}
+
+.backCategories {
+    position: relative;
+    background: transparent;
+    color: #111;
+    flex-shrink: 0;
+    border-radius: 2rem;
+    padding: .35em 1.2em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.15em;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid #bbb;
+    transition: .2s;
+    overflow: hidden;
+
+    &:hover {
+        padding-left: 2.5em;
+        
+        .arrow {
+            opacity: 1;
+        }
+    }
+}
+
+.arrow {
+    position: absolute;
+    translate: 1em;
+    left: 0;
+    scale: 1.3;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s;
 }
