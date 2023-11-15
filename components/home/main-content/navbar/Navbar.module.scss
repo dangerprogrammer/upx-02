@@ -7,11 +7,13 @@
     position: sticky;
     background: linear-gradient(to top, transparent, #eee);
     padding: .5em 2em;
+    padding-top: 1.5em;
 }
 
 .searchbarContainer {
     background: white;
-    border-radius: 3em;
+    border-radius: .5em;
+    height: 3rem;
     width: 100%;
     font-size: 1.1em;
     max-width: 30rem;
@@ -19,15 +21,25 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    overflow: hidden;
+    transition: .4s ease;
+    border: 2px solid transparent;
+    outline: 4px solid transparent;
+
+    &:has(.searchbar:focus) {
+        outline-color: #08f3;
+        border-color: #08f;
+    }
 }
 
 .searchbar {
     display: flex;
     outline: none !important;
     border: none;
-    padding: .6em 1.5em;
-    padding-left: 3.1em;
+    padding: .6rem 1.5rem;
+    padding-left: 4.1rem;
     background: transparent;
+    height: 3rem;
     width: 100%;
     font-size: 1.1em;
     font-weight: 600;
@@ -35,8 +47,15 @@
 }
 
 .searchIcon {
-    position: ãbsolute;
+    pointer-events: none;
+    position: absolute;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 2.5em;
-    padding: .2em;
+    height: 3rem;
+    width: 3rem;
+    padding: .75rem;
+    translate: .75rem;
 }

@@ -4,7 +4,7 @@ import ArrowBack from '@/assets/svgs/arrow-back-outline.svg';
 
 function Footer() {
     return <footer className={footerStyles}>
-        <button className={backCategories} onClick={() => scrollCategories(!0)}>Voltar<ArrowBack className={arrow}/></button>
+        <button className={backCategories} onClick={() => scrollCategories(!0)}>Ver categorias<ArrowBack className={arrow}/></button>
     </footer>
 };
 
