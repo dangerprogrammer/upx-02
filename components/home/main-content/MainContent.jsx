@@ -1,5 +1,5 @@
 import { mainContent, gridProducts } from './MainContent.module.scss';
-import Footer from './footer/footer.jsx';
+import Footer from './footer/Footer.jsx';
 import Navbar from './navbar/Navbar.jsx';
 import Product from './product/Product';
 
