@@ -4,10 +4,11 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: sticky;
+    position: absolute;
     background: linear-gradient(to top, transparent, #eee);
     padding: .5em 2em;
     padding-top: 1.5em;
+    z-index: 100;
 }
 
 .searchbarContainer {

@@ -24,3 +24,7 @@ svg {
     fill: currentColor;
     stroke: currentColor;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+}
