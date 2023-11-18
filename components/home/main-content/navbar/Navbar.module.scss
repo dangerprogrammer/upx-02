@@ -4,7 +4,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: sticky;
+    z-index: 10;
+    position: absolute;
     background: linear-gradient(to top, transparent, #eee);
     padding: .5em 2em;
     padding-top: 1.5em;
