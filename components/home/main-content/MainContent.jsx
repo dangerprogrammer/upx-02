@@ -4,7 +4,7 @@ import Footer from './footer/Footer.jsx';
 import Navbar from './navbar/Navbar.jsx';
 import Product from './product/Product';
 
-function MainContent({productsList, userCategories, ...contexts}) {
+function MainContent({productsList, userCategories}) {
     const [searchValue, setSearchValue] = useState(""),
         filtedCategories = productsList.filter(({categorie}) => userCategories.find(userCat => userCat == categorie));
     
@@ -12,7 +12,6 @@ function MainContent({productsList, userCategories, ...contexts}) {
 
     useEffect(() => {
         filtredProducts = filtedCategories.filter(({product: {name}}) => name.startsWith(searchValue));
-        console.log(filtredProducts);
     }, [searchValue]);
 
     return <main className={mainContent}>
