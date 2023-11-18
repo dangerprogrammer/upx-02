@@ -16,7 +16,7 @@ function RootLayout({ children }) {
     <html lang="pt-BR">
       <head>
         <script src="https://accounts.google.com/gsi/client" async defer></script>
-        <script src="https://unpkg.com/jwt-decode@4.0.0/build/cjs/index.js"></script>
+        {/* <script src="https://unpkg.com/jwt-decode@4.0.0/build/cjs/index.js"></script> */}
       </head>
       <body>
         <ContextProvider>
