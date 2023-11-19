@@ -16,21 +16,127 @@ import product15 from "@/public/imgs/product-15.webp";
 import product16 from "@/public/imgs/product-16.webp";
 
 const productsList = [
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
-    { categorie: 'damaged-eletronic', product: { name: 'iPhone 11', desc: 'lorem ipsum', price: 250, photo: exampleProduct }, user: 'Patrick', local: 'Sorocaba' },
+    {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product1
+        },
+        user: 'Patrick', local: 'Sorocaba'
+    }
 ];
 
 export default productsList;
