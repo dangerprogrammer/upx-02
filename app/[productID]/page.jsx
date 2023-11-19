@@ -1,9 +1,11 @@
 'use client';
 
-function ProductPage({ params: {productID} }) {
-    console.log(productID);
+import productsList from "@/components/context/productsList";
 
-    return <h1>Olá {productID}</h1>
+function ProductPage({ params: {productID} }) {
+    const { product: { name } } = productsList.find(({ product: {id} }) => id == productID);
+
+    return <h1>Olá {name}</h1>
 };
 
 export default ProductPage;

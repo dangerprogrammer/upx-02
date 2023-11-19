@@ -28,7 +28,7 @@ const productsList = [
             Garantia do vendedor: 90 dias.<br/>
             Garantia do vendedor: 3 meses.
             </span>,
-            price: 189.9, photo: product1
+            price: 189.9, photo: product1, id: 'product-1'
         },
         user: 'Marian Lima Carvalho', local: 'Santarém, Para(PA)'
     }, {
@@ -45,7 +45,7 @@ const productsList = [
             Adequado para pc e notebook.<br/>
             Imagens meramente ilustrativas.
             </span>,
-            price: 149.9, photo: product2
+            price: 149.9, photo: product2, id: 'product-2'
         },
         user: 'Wellington Silva de Souza', local: 'Balneário Camboriú, Santa Catarina (SC)'
     }, {
@@ -72,7 +72,7 @@ const productsList = [
             - Cabo AV/RCA<br/>
             GARANTIA DE 90 DIAS, NECESSÁRIO LEVAR OU ENVIAR EM ASSISTÊNCIA EM GUARULHOS.
             </span>,
-            price: 719.9, photo: product3
+            price: 719.9, photo: product3, id: 'product-3'
         },
         user: 'Marcos Augusto da Silva', local: 'Guarulhos, São Paulo (SP)'
     }, {
@@ -82,7 +82,7 @@ const productsList = [
             Desc: ({ ...contexts }) => <span { ...contexts }>
             Notebook positivo com Hdmi Core duo 2.00ghz 4 GB de Ram Hd320 win 10 notebook, usado e revisado.
             </span>,
-            price: 699.9, photo: product4
+            price: 699.9, photo: product4, id: 'product-4'
         },
         user: 'Victor Gabriel Santos Silva', local: 'São José, Santa Catarina (SP)'
     }, {
@@ -92,7 +92,7 @@ const productsList = [
             Desc: ({ ...contexts }) => <span { ...contexts }>
             SAMSUNG A22 128GB CELULAR COM POUCAS MARCAS DE USO ACOMPANHADO DE CARREGADOR ORIGINAL.
             </span>,
-            price: 699.9, photo: product5
+            price: 699.9, photo: product5, id: 'product-5'
         },
         user: 'Isadora Santos', local: ' São Caetano do Sul, São Paulo (SP)'
     }, {
@@ -102,7 +102,7 @@ const productsList = [
             Desc: ({ ...contexts }) => <span { ...contexts }>
             iPad com problema de inicialização e tela totalmente apagada, identificação do defeito desconhecida. Ideal para quem entende de consertos e busca uma oportunidade de compra.
             </span>,
-            price: 199.9, photo: product6
+            price: 199.9, photo: product6, id: 'product-6'
         },
         user: 'Maria Eduarda Costa', local: 'Piedade, São Paulo (SP)'
     }, {
@@ -112,7 +112,7 @@ const productsList = [
             Desc: ({ ...contexts }) => <span { ...contexts }>
             Notebook Asus ×44c em condição de uso, liga e opera normalmente. Necessita de substituição de teclado e possivelmente do touchpad. Tela em bom estado, sem marcas visíveis. HD, memória e processador em pleno funcionamento. Carcaça intacta, drive de DVD operacional e porta de carregamento em bom estado. Acompanha carregador.
             </span>,
-            price: 449.9, photo: product7
+            price: 449.9, photo: product7, id: 'product-7'
         },
         user: 'Pedro Henrique da Silva Costa', local: 'Recife, Pernambuco (PE)'
     }, {
@@ -140,7 +140,7 @@ const productsList = [
             <br/>
             Garanta o pleno funcionamento do seu notebook com esta placa mãe. Ideal para reposição ou upgrades. Entre em contato para mais detalhes.
             </span>,
-            price: 399.9, photo: product8
+            price: 399.9, photo: product8, id: 'product-8'
         },
         user: 'Beatriz Gomes', local: 'São Paulo, São Paulo (SP)'
     }, {
@@ -150,7 +150,7 @@ const productsList = [
             Desc: ({ ...contexts }) => <span { ...contexts }>
             Este galaxy win duos, ele foi o meu segundo celular que eu possui, e ele acabou ficando parado por causa que eu acabei comprando um celular mais recente, pois ele não atendia mais as minhas necessidades. E eu acabei emprestando ele para alguns parentes e ele acabou neste estado, mas eu não arrumei ele por causas... Bem claras eu acho... Ele é um celular muito antigo atualmente e não suporta mais nada hoje em dia. E eu não tenho mais oque fazer com ele atualmente.
             </span>,
-            price: 249.9, photo: product9
+            price: 249.9, photo: product9, id: 'product-9'
         },
         user: 'Jordan dos Santos Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
@@ -160,7 +160,7 @@ const productsList = [
             Desc: ({ ...contexts }) => <span { ...contexts }>
             Um amigo me deu este notebook de presente mais ele veio com problemas e não segura a carga e não compensa mais fazer a manutenção
             </span>,
-            price: 174.9, photo: product10
+            price: 174.9, photo: product10, id: 'product-10'
         },
         user: 'Beatriz da Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
@@ -173,7 +173,7 @@ const productsList = [
             vga amd r7 250x 1gb (com defeito, basta levar ao técnico)<br/>
             hd 500gb
             </span>,
-            price: 149.9, photo: product11
+            price: 149.9, photo: product11, id: 'product-11'
         },
         user: 'Paulo Machado Rocha Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
@@ -183,7 +183,7 @@ const productsList = [
             Desc: ({ ...contexts }) => <span { ...contexts }>
             Tenho este celular que acabei recuperando fui assaltado e foi recuperando porém acabei recuperando ele quebrado e já tinha comprado um novo não sei todos os problemas só a tela mesmo
             </span>,
-            price: 149.9, photo: product12
+            price: 149.9, photo: product12, id: 'product-12'
         },
         user: 'Douglas Pereira Ramos', local: 'Sorocaba, São Paulo (SP)'
     }, {
@@ -193,7 +193,7 @@ const productsList = [
             Desc: ({ ...contexts }) => <span { ...contexts }>
             TABLET DA MARCA BAK, MODELO 784, PRODUTO LIGANDO E COM PROBLEMAS EM SUA FUNCIONALIDADE,  PODE SER UTILIZADO PARA RETIRADA DE PEÇAS NAO TENHO MIAS ENTERSES
             </span>,
-            price: 74.9, photo: product13
+            price: 74.9, photo: product13, id: 'product-13'
         },
         user: 'Carol Alves Peres', local: 'Sorocaba, São Paulo (SP)'
     }, {
@@ -203,7 +203,7 @@ const productsList = [
             Desc: ({ ...contexts }) => <span { ...contexts }>
             Televisor usado, testado e funcionando perfeitamente, , Entre em contato pelo campo de mensagens que logo retornaremos e resolveremos da forma mais rápida possível.
             </span>,
-            price: 199.9, photo: product14
+            price: 199.9, photo: product14, id: 'product-14'
         },
         user: 'Marcos Silva Oliveira', local: 'Sorocaba, São Paulo (SP)'
     }, {
@@ -221,7 +221,7 @@ const productsList = [
             <br/>
             Foi comprado nos EUA em 2017, mas teve pouco uso e esta bem conservado devido ao fato de ser usado principalmente em viagens, das quais não houve muitas.
             </span>,
-            price: 629.9, photo: product15
+            price: 629.9, photo: product15, id: 'product-15'
         },
         user: 'Antonio Gonçalves', local: 'Sorocaba, São Paulo (SP)'
     }, {
@@ -231,7 +231,7 @@ const productsList = [
             Desc: ({ ...contexts }) => <span { ...contexts }>
             Este tablet é um tablet híbrido, ele não está funcionando mais altualmente Devido a super aquecimento e o seu conserto ficou inviável por custava mais que a metade do preço original.
             </span>,
-            price: 99.9, photo: product16
+            price: 99.9, photo: product16, id: 'product-16'
         },
         user: 'Elena Maria Solsa', local: 'Sorocaba, São Paulo (SP)'
     }

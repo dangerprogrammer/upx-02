@@ -1,6 +1,10 @@
+import productsList from "@/components/context/productsList";
+
 export function generateMetadata({ params: { productID } }) {
+    const { product: { name: productName } } = productsList.find(({ product: {id} }) => id == productID);
+
     return {
-        title: productID
+        title: productName
     };
 };
 
