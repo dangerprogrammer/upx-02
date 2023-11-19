@@ -1,12 +1,10 @@
-import { useRouter } from "next/router";
 import ArrowBack from '@/assets/svgs/arrow-back-outline.svg';
 import { footerStyles, backCategories, arrow } from '../home/main-content/footer/Footer.module.scss';
+import Link from "next/link";
 
 function BackPage() {
-    const { back } = useRouter();
-
     return <footer className={footerStyles}>
-        <button className={backCategories} onClick={back}>Voltar para o site<ArrowBack className={arrow}/></button>
+        <Link className={backCategories} href={'/'}>Voltar para o site<ArrowBack className={arrow}/></Link>
     </footer>
 };
 

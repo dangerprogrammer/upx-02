@@ -3,7 +3,6 @@
 import BackPage from "@/components/back-page/BackPage";
 import productsList from "@/components/context/productsList";
 
-
 function ProductPage({ params: {productID} }) {
     const { product: { name } } = productsList.find(({ product: {id} }) => id == productID);
 
