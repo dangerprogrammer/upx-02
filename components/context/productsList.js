@@ -19,11 +19,18 @@ const productsList = [
     {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product1
+            name: 'Placa Mãe Dell Optiplex 380 Dt Pn Fr6wh Funcionando Ok',
+            Desc: () => <>
+            PRODUTO TESTADO OTIMO ESTADO 03 MESES DE GARANTIA Placa Mãe Dell Optiplex ORIGINAL.<br/>
+            GABINETE 380 DT DESCKTOP E GABINETE TORRE MT.<br/>
+            PLACA TESTADA E COM GARANTIA.<br/>
+            EMITO NFE PARA EMPRESAS SE PRECISAR.<br/>
+            Garantia do vendedor: 90 dias.<br/>
+            Garantia do vendedor: 3 meses.
+            </>,
+            price: 189.6, photo: product1
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Marian Lima Carvalho', local: 'Santarém, Para(PA)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
