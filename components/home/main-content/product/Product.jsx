@@ -4,10 +4,10 @@ import Home from '@/assets/svgs/home-outline.svg';
 import { useRouter } from 'next/navigation';
 
 function Product({systemCategories, categorie, product: {name, Desc, price, photo, id}, local}) {
-    const router = useRouter();
+    const { push } = useRouter();
 
     return <li className={productStyles}>
-        <div onClick={() => router.push(`/${id}`)}>
+        <div onClick={() => push(`/${id}`)}>
             <Image alt='' src={photo} className={imageStyles}/>
             <Image alt='' src={photo} className={`${imageStyles} ${shadow}`}/>
             <span className={showHover}>Ver produto!</span>
