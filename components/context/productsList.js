@@ -34,7 +34,7 @@ const productsList = [
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
+            name: 'Disco sólido interno Western Digital WD Green WDS480G2G0B 480GB verde (seminovo)',
             Desc: () => <>
             E útil para salvar programas e documentos com sua capacidade de 480 GB.<br/>
             Resistente aos choques fortes.<br/>
@@ -47,13 +47,32 @@ const productsList = [
             </>,
             price: 150, photo: product2
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Wellington Silva de Souza', local: 'Balneário Camboriú, Santa Catarina (SC)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product3
+            name: 'Smart Tv 32 Android Wifi Bluetooth Bivolt Com Pixel Queimado',
+            Desc: () => <>
+            Usada<br/>
+            Possui pequenos pontos pixel na tela.<br/>
+            TV funcionando<br/>
+            Realizando a compra vc pode solicitar um video onde iremos detalhar os pontos.<br/>
+            Compre somente se concordar com o estado que a TV se encontra.<br/>
+            TV possui<br/>
+            - Android<br/>
+            - Wi-FI<br/>
+            - Bluettoth<br/>
+            - Apps: Netflix, Youtube, Globoplay, Disney+, Prime Video<br/>
+            - Controle com Comando de Voz<br/>
+            Todas as funções funcionando.<br/>
+            O que acompanha:<br/>
+            - TV<br/>
+            - Cabo de Força<br/>
+            - Controle Remoto com Comando de Voz<br/>
+            - Cabo AV/RCA<br/>
+            GARANTIA DE 90 DIAS, NECESSÁRIO LEVAR OU ENVIAR EM ASSISTÊNCIA EM GUARULHOS.
+            </>,
+            price: 719, photo: product3
         },
         user: 'Patrick', local: 'Sorocaba'
     }, {
