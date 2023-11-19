@@ -108,7 +108,7 @@ const productsList = [
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
+            name: 'Notebook Asus ×44c',
             Desc: () => <>
             Notebook Asus ×44c em condição de uso, liga e opera normalmente. Necessita de substituição de teclado e possivelmente do touchpad. Tela em bom estado, sem marcas visíveis. HD, memória e processador em pleno funcionamento. Carcaça intacta, drive de DVD operacional e porta de carregamento em bom estado. Acompanha carregador.
             </>,
@@ -119,15 +119,6 @@ const productsList = [
         categorie: 'damaged-eletronic',
         product: {
             name: 'Vendo Placa Mãe para Notebook Samsung NP275E4E/BA41-02239A.',
-            Desc: () => <>
-            </>,
-            price: 250, photo: product8
-        },
-        user: 'Patrick', local: 'Sorocaba'
-    }, {
-        categorie: 'damaged-eletronic',
-        product: {
-            name: 'iPhone 11',
             Desc: () => <>
             - Processador Integrado: AMD E1-1500<br/>
             - Marca: Samsung<br/>
@@ -149,9 +140,18 @@ const productsList = [
             <br/>
             Garanta o pleno funcionamento do seu notebook com esta placa mãe. Ideal para reposição ou upgrades. Entre em contato para mais detalhes.
             </>,
-            price: 400, photo: product9
+            price: 400, photo: product8
         },
         user: 'Beatriz Gomes', local: 'São Paulo, São Paulo (SP)'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'galaxy win duos',
+            Desc: () => <>
+            </>,
+            price: 400, photo: product9
+        },
+        user: 'Jordan dos Santos Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
