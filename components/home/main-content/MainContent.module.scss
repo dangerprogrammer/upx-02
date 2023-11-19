@@ -16,5 +16,12 @@
     padding-top: 5rem;
     overflow-y: auto;
     height: 100%;
-    min-height: 10rem;
+
+    > h1 {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
