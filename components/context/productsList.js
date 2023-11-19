@@ -189,11 +189,13 @@ const productsList = [
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product13
+            name: 'Tablet Bak 784',
+            Desc: () => <>
+            TABLET DA MARCA BAK, MODELO 784, PRODUTO LIGANDO E COM PROBLEMAS EM SUA FUNCIONALIDADE,  PODE SER UTILIZADO PARA RETIRADA DE PEÇAS NAO TENHO MIAS ENTERSES
+            </>,
+            price: 74.9, photo: product13
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Carol Alves Peres', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
