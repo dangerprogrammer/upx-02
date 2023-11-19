@@ -8,6 +8,7 @@
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .flexRow {
@@ -18,7 +19,7 @@
 
 .imageStyles {
     position: relative;
-    height: 100%;
+    height: auto;
     width: 100%;
     overflow: hidden;
     border-radius: 1em;
