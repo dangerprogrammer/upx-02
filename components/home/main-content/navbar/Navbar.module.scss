@@ -78,6 +78,7 @@
     cursor: pointer;
 
     .menuContainer {
+        cursor: default;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -89,11 +90,16 @@
         font-size: .75em;
         transition: .2s ease-in-out;
         border-radius: .5em;
+
+        button {
+            cursor: pointer;
+        }
     }
 
     &:not(.hideMenu) {
         .menuContainer {
             opacity: 0;
+            pointer-events: none;
             translate:  0 -2rem;
         }
     }
@@ -102,6 +108,7 @@
         .menuContainer {
             opacity: 1;
             translate: 0 0;
+            pointer-events: initial;
         }
     }
 
