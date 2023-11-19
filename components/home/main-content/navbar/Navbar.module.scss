@@ -2,7 +2,7 @@
     top: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     z-index: 10;
     position: absolute;
@@ -14,6 +14,7 @@
 .searchbarContainer {
     background: white;
     border-radius: .5em;
+    flex-grow: 1;
     height: 3rem;
     width: 100%;
     font-size: 1.1em;
@@ -64,4 +65,16 @@
     width: 3rem;
     padding: .75rem;
     translate: .75rem;
+}
+
+.personContainer {
+    padding: .75em;
+}
+
+.searchContainer {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
