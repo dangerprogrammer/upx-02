@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 
 function logout() {
-    const { reload } = useRouter();
+    const { redirect } = useRouter();
 
     localStorage.removeItem('user-data');
 
