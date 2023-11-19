@@ -173,7 +173,7 @@ const productsList = [
             vga amd r7 250x 1gb (com defeito, basta levar ao técnico)<br/>
             hd 500gb
             </>,
-            price: 250, photo: product11
+            price: 149.9, photo: product11
         },
         user: 'Paulo Machado Rocha Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
