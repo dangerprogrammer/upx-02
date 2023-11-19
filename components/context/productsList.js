@@ -35,8 +35,17 @@ const productsList = [
         categorie: 'damaged-eletronic',
         product: {
             name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product2
+            Desc: () => <>
+            E útil para salvar programas e documentos com sua capacidade de 480 GB.<br/>
+            Resistente aos choques fortes.<br/>
+            Mais espaço no seu PC com o fator de forma M.2 2280.<br/>
+            E compatível com Windows.<br/>
+            Disco externo desktop.<br/>
+            Interface de conexão: sata III.<br/>
+            Adequado para pc e notebook.<br/>
+            Imagens meramente ilustrativas.
+            </>,
+            price: 150, photo: product2
         },
         user: 'Patrick', local: 'Sorocaba'
     }, {

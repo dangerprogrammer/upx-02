@@ -1,7 +1,7 @@
 import { productStyles, flexRow, imageStyles } from './Product.module.scss';
 import Image from "next/image";
 
-function Product({product: {name, desc, price, photo}, user, local}) {
+function Product({product: {name, Desc, price, photo}, user, local}) {
     return <li className={productStyles}>
         <Image alt='' src={photo} className={imageStyles}/>
         <span className={flexRow}>
@@ -10,7 +10,9 @@ function Product({product: {name, desc, price, photo}, user, local}) {
         </span>
         <h3>{user}</h3>
         <h4>{local}</h4>
-        <p>{desc}</p>
+        <p>
+            <Desc/>
+        </p>
     </li>
 };
 
