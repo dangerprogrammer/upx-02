@@ -21,11 +21,12 @@
 }
 
 .wrapLines {
+    --wrap: 2;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.2em;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: var(--wrap);
     -webkit-box-orient: vertical;
 }
 
@@ -40,14 +41,37 @@
     }
 }
 
-.imageStyles {
+*:has(> .imageStyles) {
     position: relative;
-    height: auto;
-    width: 100%;
     overflow: hidden;
     border-radius: 1em;
-    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageStyles {
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    height: auto;
+    width: 100%;
+    max-height: 12rem;
     margin-bottom: 1em;
+
+    &.shadow {
+        position: absolute;
+        scale: 1.1;
+        pointer-events: none;
+        filter: blur(.2em);
+        object-fit: cover;
+    }
+
+    &:not(.shadow) {
+        position: relative;
+        z-index: 100;
+        object-fit: contain;
+    }
 }
 
 .localStyles {
