@@ -77,13 +77,11 @@
     &:hover {
         .showHover {
             opacity: 1;
-            pointer-events: initial;
         }
     }
     &:not(:hover) {
         .showHover {
             opacity: 0;
-            pointer-events: none;
         }
     }
 }
