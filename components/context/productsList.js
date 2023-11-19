@@ -136,6 +136,14 @@ const productsList = [
             price: 250, photo: product15
         },
         user: 'Patrick', local: 'Sorocaba'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'iPhone 11',
+            Desc: () => <></>,
+            price: 250, photo: product16
+        },
+        user: 'Patrick', local: 'Sorocaba'
     }
 ];
 
