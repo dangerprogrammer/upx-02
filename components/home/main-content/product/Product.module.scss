@@ -20,13 +20,19 @@
     }
 }
 
+.categorieName {
+    background: #c0c0c0ac;
+    font-weight: 600;
+    display: flex;
+}
+
 .wrapLines {
     --wrap: 2;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.2em;
     display: -webkit-box;
-    // -webkit-line-clamp: var(--wrap);
+    -webkit-line-clamp: var(--wrap);
     -webkit-box-orient: vertical;
 }
 
