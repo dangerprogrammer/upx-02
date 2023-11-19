@@ -5,7 +5,7 @@ function Navbar({ setFiltredProducts, filtedCategories }) {
     return <nav className={navbar}>
         <main className={searchbarContainer}>
             <SearchIcon className={searchIcon}/>
-            <input type="text" id="searchbar" placeholder='Pesquise por algum produto!' className={searchbar} onChange={({ target: {value} }) => setFiltredProducts(() => filtedCategories.filter(({product: {name}}) => name.startsWith(value)))}/>
+            <input type="text" id="searchbar" placeholder='Pesquise por algum produto!' className={searchbar} onChange={({ target: {value} }) => setFiltredProducts(() => filtedCategories.filter(({product: {name}}) => name.includes(value)))}/>
         </main>
     </nav>
 };

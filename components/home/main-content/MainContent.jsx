@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { mainContent, gridProducts } from './MainContent.module.scss';
-import Footer from './footer/Footer.jsx';
-import Navbar from './navbar/Navbar.jsx';
+import Footer from './footer/Footer';
+import Navbar from './navbar/Navbar';
 import Product from './product/Product';
 
 function MainContent({productsList, userCategories}) {

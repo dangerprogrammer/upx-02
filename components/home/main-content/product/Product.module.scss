@@ -3,7 +3,8 @@
     flex-grow: 1;
     position: relative;
     background: #ddda;
-    padding: 1em 2em;
+    padding: 1em;
+    max-width: 20rem;
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -13,4 +14,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.imageStyles {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1em;
+    background: red;
+    margin-bottom: 1em;
 }
