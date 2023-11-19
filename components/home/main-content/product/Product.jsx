@@ -9,7 +9,9 @@ function Product({systemCategories, categorie, product: {name, Desc, price, phot
             <Image alt='' src={photo} className={`${imageStyles} ${shadow}`}/>
             <span className={showHover}>Ver produto!</span>
         </div>
-        <div className={categorieName}>{systemCategories.find(({ id }) => id == categorie).name}</div>
+        <div className={categorieName}>
+            <span>{systemCategories.find(({ id }) => id == categorie).name}</span>
+        </div>
         <span className={flexRow}>
             <h2 className={wrapLines}>{name}</h2>
             <h2 className={important}>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})}</h2>
