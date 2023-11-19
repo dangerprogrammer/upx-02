@@ -1,10 +1,13 @@
 import { productStyles, imageStyles, localStyles, important, wrapLines, shadow, showHover, categorieName, greenColor } from './Product.module.scss';
 import Image from "next/image";
 import Home from '@/assets/svgs/home-outline.svg';
+import { useRouter } from 'next/navigation';
 
-function Product({systemCategories, categorie, product: {name, Desc, price, photo}, local}) {
+function Product({systemCategories, categorie, product: {name, Desc, price, photo, id}, local}) {
+    const router = useRouter();
+
     return <li className={productStyles}>
-        <div onClick={() => console.log("ver produto!")}>
+        <div onClick={() => router.push(`/${id}`)}>
             <Image alt='' src={photo} className={imageStyles}/>
             <Image alt='' src={photo} className={`${imageStyles} ${shadow}`}/>
             <span className={showHover}>Ver produto!</span>

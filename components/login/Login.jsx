@@ -8,7 +8,6 @@ import
 // import recycleWallpaper from '@/public/imgs/recycle-wallpaper.jpeg';
 
 function LoginContainer({ children, setLogin }) {
-
     return <main className={mainContainer}>
         <section className={container}>
             <span className={backgroundContainer}>
