@@ -209,11 +209,21 @@ const productsList = [
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product15
+            name: 'Notebook Hp I7 Envy',
+            Desc: () => <>
+            Este é um computador com uma CPU Intel Core i7-7500U, classificada como a número 171 entre as CPUs mais populares, e uma GPU Intel HD Graphics 620, classificada como a número 300 entre as GPUs mais populares.<br/>
+            <br/>
+            A tela é um display de 15,6 polegadas com resolução 4K UHD (3840 x 2160) e tecnologia IPS.<br/>
+            O armazenamento inclui um SSD de 128 GB e um HDD de 1 TB a 5400 rpm, além de um slot M.2 que suporta PCIe NVMe.<br/>
+            A memória RAM é de 16 GB DDR4 e o sistema operacional é o Windows 10.<br/>
+            <br/>
+            O computador tem dimensões de 378 x 255 x 18 mm e pesa 2,23 kg (4,9 lbs).<br/>
+            <br/>
+            Foi comprado nos EUA em 2017, mas teve pouco uso e esta bem conservado devido ao fato de ser usado principalmente em viagens, das quais não houve muitas.
+            </>,
+            price: 629.9, photo: product15
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Antonio Gonçalves', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
