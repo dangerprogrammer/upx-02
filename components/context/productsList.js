@@ -74,7 +74,7 @@ const productsList = [
             </>,
             price: 719, photo: product3
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Marcos Augusto da Silva', local: 'Guarulhos (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
