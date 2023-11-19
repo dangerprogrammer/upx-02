@@ -227,11 +227,13 @@ const productsList = [
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product16
+            name: 'Tablet m8w pkus5 plus',
+            Desc: () => <>
+            Este tablet é um tablet híbrido, ele não está funcionando mais altualmente Devido a super aquecimento e o seu conserto ficou inviável por custava mais que a metade do preço original.
+            </>,
+            price: 49.9, photo: product16
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Elena Maria Solsa', local: 'Sorocaba, São Paulo (SP)'
     }
 ];
 
