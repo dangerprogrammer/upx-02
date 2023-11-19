@@ -4,7 +4,6 @@ import MenuIcon from '@/assets/svgs/menu-outline.svg';
 import LogoutIcon from '@/assets/svgs/log-out-outline.svg';
 import logout from '@/scripts/logout';
 
-
 function Navbar({ setFiltredProducts, filtedCategories }) {
     return <nav className={navbar}>
         <main className={searchContainer}>

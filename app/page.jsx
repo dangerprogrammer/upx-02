@@ -10,7 +10,7 @@ function HomePage() {
 
   useEffect(() => onLoadedPage({ login, setLogin, setUserCategories }), []);
 
-  return <Home { ...login } setUserCategories={setUserCategories} { ...contexts }/>
+  return <Home { ...{...login, ...contexts, setUserCategories, setLogin} }/>
 };
 
 export default HomePage;

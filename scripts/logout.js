@@ -1,9 +1,8 @@
-import { redirect } from 'next/navigation';
-
 function logout() {
     localStorage.removeItem('user-data');
+    localStorage.removeItem('user-categories');
 
-    return redirect('/login');
+    window.location.reload();
 };
 
 export default logout;
