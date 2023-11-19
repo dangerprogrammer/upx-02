@@ -199,11 +199,13 @@ const productsList = [
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product14
+            name: 'Televisor Philips',
+            Desc: () => <>
+            Televisor usado, testado e funcionando perfeitamente, , Entre em contato pelo campo de mensagens que logo retornaremos e resolveremos da forma mais rápida possível.
+            </>,
+            price: 199.9, photo: product14
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Marcos Silva Oliveira', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
