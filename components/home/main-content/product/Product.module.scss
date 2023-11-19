@@ -26,12 +26,16 @@
     justify-content: flex-start;
 
     > * {
-        padding: .1em .6em;
-        font-weight: 600;
+        padding-inline: .6em;
+        font-weight: 700;
         border-radius: .2em;
         display: flex;
         background: #c0c0c0ac;
     }
+}
+
+.greyColor {
+    color: #222;
 }
 
 .wrapLines {
@@ -42,17 +46,6 @@
     display: -webkit-box;
     -webkit-line-clamp: var(--wrap);
     -webkit-box-orient: vertical;
-}
-
-.flexRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 100%;
-
-    > *:not(.important) {
-        word-break: break-word;
-    }
 }
 
 *:has(> .imageStyles) {

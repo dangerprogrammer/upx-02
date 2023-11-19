@@ -1,8 +1,8 @@
-import { productStyles, flexRow, imageStyles, localStyles, important, wrapLines, shadow, showHover, categorieName } from './Product.module.scss';
+import { productStyles, imageStyles, localStyles, important, wrapLines, shadow, showHover, categorieName, greyColor } from './Product.module.scss';
 import Image from "next/image";
 import Home from '@/assets/svgs/home-outline.svg';
 
-function Product({systemCategories, categorie, product: {name, Desc, price, photo}, user, local}) {
+function Product({systemCategories, categorie, product: {name, Desc, price, photo}, local}) {
     return <li className={productStyles}>
         <div onClick={() => console.log("ver produto!")}>
             <Image alt='' src={photo} className={imageStyles}/>
@@ -12,11 +12,8 @@ function Product({systemCategories, categorie, product: {name, Desc, price, phot
         <div className={categorieName}>
             <span>{systemCategories.find(({ id }) => id == categorie).name}</span>
         </div>
-        <span className={flexRow}>
-            <h2 className={wrapLines}>{name}</h2>
-            <h2 className={important}>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})}</h2>
-        </span>
-        <h3>{user}</h3>
+        <h3 className={wrapLines}>{name}</h3>
+        <h2 className={important}>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})}</h2>
         <h4 className={localStyles}><Home/>{local}</h4>
         <p>
             <Desc className={wrapLines} style={{'--wrap': 3}}/>
