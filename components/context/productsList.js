@@ -92,25 +92,29 @@ const productsList = [
             Desc: () => <>
             SAMSUNG A22 128GB CELULAR COM POUCAS MARCAS DE USO ACOMPANHADO DE CARREGADOR ORIGINAL.
             </>,
-            price: 250, photo: product5
+            price: 700, photo: product5
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Isadora Santos', local: ' São Caetano do Sul, São Paulo (SP)'
+    }, {
+        categorie: 'damaged-eletronic',
+        product: {
+            name: 'IPAD',
+            Desc: () => <>
+            iPad com problema de inicialização e tela totalmente apagada, identificação do defeito desconhecida. Ideal para quem entende de consertos e busca uma oportunidade de compra.
+            </>,
+            price: 200, photo: product6
+        },
+        user: 'Maria Eduarda Costa', local: 'Piedade, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
             name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product6
+            Desc: () => <>
+            Notebook Asus ×44c em condição de uso, liga e opera normalmente. Necessita de substituição de teclado e possivelmente do touchpad. Tela em bom estado, sem marcas visíveis. HD, memória e processador em pleno funcionamento. Carcaça intacta, drive de DVD operacional e porta de carregamento em bom estado. Acompanha carregador.
+            </>,
+            price: 450, photo: product7
         },
-        user: 'Patrick', local: 'Sorocaba'
-    }, {
-        categorie: 'damaged-eletronic',
-        product: {
-            name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product7
-        },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Pedro Henrique da Silva Costa', local: 'Recife, Pernambuco (PE)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
