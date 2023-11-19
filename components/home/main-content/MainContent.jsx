@@ -4,7 +4,7 @@ import Footer from './footer/Footer';
 import Navbar from './navbar/Navbar';
 import Product from './product/Product';
 
-function MainContent({productsList, userCategories}) {
+function MainContent({productsList, userCategories, systemCategories}) {
     const filtedCategories = productsList.filter(({categorie}) => userCategories.find(userCat => userCat == categorie)),
         [filtredProducts, setFiltredProducts] = useState(filtedCategories);
 
@@ -14,7 +14,7 @@ function MainContent({productsList, userCategories}) {
         <Navbar {...{setFiltredProducts, filtedCategories}}/>
         <section className={gridProducts}>
             {filtredProducts.length
-            ? filtredProducts.map(({ ...context }, ind) => <Product { ...context } key={ind}/>)
+            ? filtredProducts.map(({ ...context }, ind) => <Product { ...{...context, systemCategories} } key={ind}/>)
             : <h1>Não há produtos disponíveis!</h1>}
         </section>
         <Footer />

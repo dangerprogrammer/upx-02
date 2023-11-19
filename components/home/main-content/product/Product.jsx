@@ -2,13 +2,14 @@ import { productStyles, flexRow, imageStyles, localStyles, important, wrapLines,
 import Image from "next/image";
 import Home from '@/assets/svgs/home-outline.svg';
 
-function Product({product: {name, Desc, price, photo}, user, local}) {
+function Product({systemCategories, categorie, product: {name, Desc, price, photo}, user, local}) {
     return <li className={productStyles}>
         <div onClick={() => console.log("ver produto!")}>
             <Image alt='' src={photo} className={imageStyles}/>
             <Image alt='' src={photo} className={`${imageStyles} ${shadow}`}/>
             <span className={showHover}>Ver produto!</span>
         </div>
+        <h3>{systemCategories.find(({ id }) => id == categorie).name}</h3>
         <span className={flexRow}>
             <h2 className={wrapLines}>{name}</h2>
             <h2 className={important}>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})}</h2>
