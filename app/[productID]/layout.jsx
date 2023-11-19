@@ -1,4 +1,4 @@
-export async function generateMetadata({ params: { productID } }) {
+export function generateMetadata({ params: { productID } }) {
     return {
         title: productID
     };
