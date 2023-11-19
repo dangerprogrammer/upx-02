@@ -33,3 +33,15 @@
     background: red;
     margin-bottom: 1em;
 }
+
+.localStyles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
+
+    svg {
+        font-size: 1.3em;
+        flex-shrink: 0;
+    }
+}
