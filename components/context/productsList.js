@@ -157,7 +157,9 @@ const productsList = [
         categorie: 'damaged-eletronic',
         product: {
             name: 'Pavilion dv7',
-            Desc: () => <></>,
+            Desc: () => <>
+            Um amigo me deu este notebook de presente mais ele veio com problemas e não segura a carga e não compensa mais fazer a manutenção
+            </>,
             price: 174.9, photo: product10
         },
         user: 'Beatriz da Silva', local: 'Sorocaba, São Paulo (SP)'
@@ -165,10 +167,15 @@ const productsList = [
         categorie: 'damaged-eletronic',
         product: {
             name: 'iPhone 11',
-            Desc: () => <></>,
+            Desc: () => <>
+            cpu amd fx 6300 3.5ghz<br/>
+            mem 8gb ddr3<br/>
+            vga amd r7 250x 1gb (com defeito, basta levar ao técnico)<br/>
+            hd 500gb
+            </>,
             price: 250, photo: product11
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Paulo Machado Rocha Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
