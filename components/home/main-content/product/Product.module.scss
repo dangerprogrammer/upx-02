@@ -25,7 +25,7 @@
     max-width: 100%;
 
     > *:not(.important) {
-        background: red;
+        word-break: break-word;
     }
 }
 
