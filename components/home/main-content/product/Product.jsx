@@ -1,12 +1,13 @@
-import { productStyles, flexRow, imageStyles, localStyles, important, wrapLines, shadow } from './Product.module.scss';
+import { productStyles, flexRow, imageStyles, localStyles, important, wrapLines, shadow, showHover } from './Product.module.scss';
 import Image from "next/image";
 import Home from '@/assets/svgs/home-outline.svg';
 
 function Product({product: {name, Desc, price, photo}, user, local}) {
     return <li className={productStyles}>
-        <div>
+        <div onClick={() => console.log("ver produto!")}>
             <Image alt='' src={photo} className={imageStyles}/>
             <Image alt='' src={photo} className={`${imageStyles} ${shadow}`}/>
+            <span className={showHover}>Ver produto!</span>
         </div>
         <span className={flexRow}>
             <h2 className={wrapLines}>{name}</h2>

@@ -50,6 +50,44 @@
     justify-content: center;
 }
 
+*:has(> .showHover) {
+    position: relative;
+
+    > *:not(.showHover) {
+        pointer-events: none;
+    }
+
+    .showHover {
+        background: #000a;
+        color: #eee;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        font-weight: 700;
+        font-size: 1.2em;
+        letter-spacing: .1em;
+        transition: .2s ease-in-out;
+        cursor: pointer;
+    }
+
+    &:hover {
+        .showHover {
+            opacity: 1;
+            pointer-events: initial;
+        }
+    }
+    &:not(:hover) {
+        .showHover {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+}
+
 .imageStyles {
     top: 50%;
     left: 50%;
@@ -69,7 +107,7 @@
 
     &:not(.shadow) {
         position: relative;
-        z-index: 100;
+        z-index: 1;
         object-fit: contain;
     }
 }
