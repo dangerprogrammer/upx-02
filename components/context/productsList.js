@@ -74,20 +74,24 @@ const productsList = [
             </>,
             price: 719, photo: product3
         },
-        user: 'Marcos Augusto da Silva', local: 'Guarulhos (SP)'
+        user: 'Marcos Augusto da Silva', local: 'Guarulhos, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product4
+            name: 'Notebook Positivo',
+            Desc: () => <>
+            Notebook positivo com Hdmi Core duo 2.00ghz 4 GB de Ram Hd320 win 10 notebook, usado e revisado.
+            </>,
+            price: 699, photo: product4
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Victor Gabriel Santos Silva', local: 'São José, Santa Catarina (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
-            Desc: () => <></>,
+            name: 'Smartphone Samsung A22',
+            Desc: () => <>
+            SAMSUNG A22 128GB CELULAR COM POUCAS MARCAS DE USO ACOMPANHADO DE CARREGADOR ORIGINAL.
+            </>,
             price: 250, photo: product5
         },
         user: 'Patrick', local: 'Sorocaba'
