@@ -166,7 +166,7 @@ const productsList = [
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
+            name: 'Dell MT-G90BK',
             Desc: () => <>
             cpu amd fx 6300 3.5ghz<br/>
             mem 8gb ddr3<br/>
