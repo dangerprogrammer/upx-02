@@ -28,7 +28,7 @@ const productsList = [
             Garantia do vendedor: 90 dias.<br/>
             Garantia do vendedor: 3 meses.
             </>,
-            price: 189.6, photo: product1
+            price: 189.9, photo: product1
         },
         user: 'Marian Lima Carvalho', local: 'Santarém, Para(PA)'
     }, {
@@ -45,7 +45,7 @@ const productsList = [
             Adequado para pc e notebook.<br/>
             Imagens meramente ilustrativas.
             </>,
-            price: 150, photo: product2
+            price: 149.9, photo: product2
         },
         user: 'Wellington Silva de Souza', local: 'Balneário Camboriú, Santa Catarina (SC)'
     }, {
@@ -72,7 +72,7 @@ const productsList = [
             - Cabo AV/RCA<br/>
             GARANTIA DE 90 DIAS, NECESSÁRIO LEVAR OU ENVIAR EM ASSISTÊNCIA EM GUARULHOS.
             </>,
-            price: 719, photo: product3
+            price: 719.9, photo: product3
         },
         user: 'Marcos Augusto da Silva', local: 'Guarulhos, São Paulo (SP)'
     }, {
@@ -82,7 +82,7 @@ const productsList = [
             Desc: () => <>
             Notebook positivo com Hdmi Core duo 2.00ghz 4 GB de Ram Hd320 win 10 notebook, usado e revisado.
             </>,
-            price: 699, photo: product4
+            price: 699.9, photo: product4
         },
         user: 'Victor Gabriel Santos Silva', local: 'São José, Santa Catarina (SP)'
     }, {
@@ -92,7 +92,7 @@ const productsList = [
             Desc: () => <>
             SAMSUNG A22 128GB CELULAR COM POUCAS MARCAS DE USO ACOMPANHADO DE CARREGADOR ORIGINAL.
             </>,
-            price: 700, photo: product5
+            price: 699.9, photo: product5
         },
         user: 'Isadora Santos', local: ' São Caetano do Sul, São Paulo (SP)'
     }, {
@@ -102,7 +102,7 @@ const productsList = [
             Desc: () => <>
             iPad com problema de inicialização e tela totalmente apagada, identificação do defeito desconhecida. Ideal para quem entende de consertos e busca uma oportunidade de compra.
             </>,
-            price: 200, photo: product6
+            price: 199.9, photo: product6
         },
         user: 'Maria Eduarda Costa', local: 'Piedade, São Paulo (SP)'
     }, {
@@ -112,7 +112,7 @@ const productsList = [
             Desc: () => <>
             Notebook Asus ×44c em condição de uso, liga e opera normalmente. Necessita de substituição de teclado e possivelmente do touchpad. Tela em bom estado, sem marcas visíveis. HD, memória e processador em pleno funcionamento. Carcaça intacta, drive de DVD operacional e porta de carregamento em bom estado. Acompanha carregador.
             </>,
-            price: 450, photo: product7
+            price: 449.9, photo: product7
         },
         user: 'Pedro Henrique da Silva Costa', local: 'Recife, Pernambuco (PE)'
     }, {
@@ -140,7 +140,7 @@ const productsList = [
             <br/>
             Garanta o pleno funcionamento do seu notebook com esta placa mãe. Ideal para reposição ou upgrades. Entre em contato para mais detalhes.
             </>,
-            price: 400, photo: product8
+            price: 399.9, photo: product8
         },
         user: 'Beatriz Gomes', local: 'São Paulo, São Paulo (SP)'
     }, {
@@ -148,18 +148,19 @@ const productsList = [
         product: {
             name: 'galaxy win duos',
             Desc: () => <>
+            Este galaxy win duos, ele foi o meu segundo celular que eu possui, e ele acabou ficando parado por causa que eu acabei comprando um celular mais recente, pois ele não atendia mais as minhas necessidades. E eu acabei emprestando ele para alguns parentes e ele acabou neste estado, mas eu não arrumei ele por causas... Bem claras eu acho... Ele é um celular muito antigo atualmente e não suporta mais nada hoje em dia. E eu não tenho mais oque fazer com ele atualmente.
             </>,
-            price: 400, photo: product9
+            price: 249.9, photo: product9
         },
         user: 'Jordan dos Santos Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
+            name: 'Pavilion dv7',
             Desc: () => <></>,
-            price: 250, photo: product10
+            price: 174.9, photo: product10
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Beatriz da Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
