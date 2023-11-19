@@ -179,11 +179,13 @@ const productsList = [
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product12
+            name: 'Samsung j7',
+            Desc: () => <>
+            Tenho este celular que acabei recuperando fui assaltado e foi recuperando porém acabei recuperando ele quebrado e já tinha comprado um novo não sei todos os problemas só a tela mesmo
+            </>,
+            price: 149.9, photo: product12
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Douglas Pereira Ramos', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
