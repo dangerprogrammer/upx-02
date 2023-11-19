@@ -118,8 +118,9 @@ const productsList = [
     }, {
         categorie: 'damaged-eletronic',
         product: {
-            name: 'iPhone 11',
-            Desc: () => <></>,
+            name: 'Vendo Placa Mãe para Notebook Samsung NP275E4E/BA41-02239A.',
+            Desc: () => <>
+            </>,
             price: 250, photo: product8
         },
         user: 'Patrick', local: 'Sorocaba'
@@ -127,10 +128,30 @@ const productsList = [
         categorie: 'damaged-eletronic',
         product: {
             name: 'iPhone 11',
-            Desc: () => <></>,
-            price: 250, photo: product9
+            Desc: () => <>
+            - Processador Integrado: AMD E1-1500<br/>
+            - Marca: Samsung<br/>
+            - Linha: NP275<br/>
+            - Modelo: BA41-02239A<br/>
+            - Cor: Azul<br/>
+            <br/>
+            Outras características:<br/>
+            - Plataforma: AMD<br/>
+            - Socket: Amd<br/>
+            - Fator de forma: Notebook<br/>
+            - Slots de expansão: 2<br/>
+            - Aplicações: Notebook<br/>
+            - Com processador: Sim<br/>
+            <br/>
+            Especificações de memória RAM:<br/>
+            - Tipo: DDR3<br/>
+            - Capacidade máxima suportada: 16GB<br/>
+            <br/>
+            Garanta o pleno funcionamento do seu notebook com esta placa mãe. Ideal para reposição ou upgrades. Entre em contato para mais detalhes.
+            </>,
+            price: 400, photo: product9
         },
-        user: 'Patrick', local: 'Sorocaba'
+        user: 'Beatriz Gomes', local: 'São Paulo, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
         product: {
