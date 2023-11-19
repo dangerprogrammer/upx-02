@@ -1,4 +1,4 @@
-import { productStyles, imageStyles, localStyles, important, wrapLines, shadow, showHover, categorieName, greyColor } from './Product.module.scss';
+import { productStyles, imageStyles, localStyles, important, wrapLines, shadow, showHover, categorieName, greenColor } from './Product.module.scss';
 import Image from "next/image";
 import Home from '@/assets/svgs/home-outline.svg';
 
@@ -13,7 +13,7 @@ function Product({systemCategories, categorie, product: {name, Desc, price, phot
             <span>{systemCategories.find(({ id }) => id == categorie).name}</span>
         </div>
         <h3 className={wrapLines}>{name}</h3>
-        <h2 className={important}>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})}</h2>
+        <h2 className={`${important} ${greenColor}`}>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})}</h2>
         <h4 className={localStyles}><Home/>{local}</h4>
         <p>
             <Desc className={wrapLines} style={{'--wrap': 3}}/>
