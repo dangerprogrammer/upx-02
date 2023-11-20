@@ -4,8 +4,9 @@ import BackPage from "@/components/back-page/BackPage";
 import Home from '@/assets/svgs/home-outline.svg';
 import Cart from '@/assets/svgs/cart-outline.svg';
 import realCash from '@/scripts/realCash';
+import setCart from './setCart';
 
-function ProductContainer({systemCategories, categorie, product: {name, Desc, price, photo}, user, local}) {
+function ProductContainer({systemCategories, categorie, product, product: {name, Desc, price, photo}, user, local, setUserCart}) {
     const productCategorie = systemCategories.find(({ id }) => id == categorie);
 
     return <div className={pageContainer}>
@@ -39,7 +40,7 @@ function ProductContainer({systemCategories, categorie, product: {name, Desc, pr
                         </div>
                     </section>
                     <section className={paymentRequest}>
-                        <button className={cart}>Adicionar ao carrinho<Cart/></button>
+                        <button className={cart} onClick={() => setCart({ add, product }, { setUserCart })}>Adicionar ao carrinho<Cart/></button>
                         <button>Comprar Agora</button>
                     </section>
                     <p>

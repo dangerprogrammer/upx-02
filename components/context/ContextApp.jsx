@@ -14,6 +14,7 @@ function ContextProvider({ children }) {
         values = {
             login, setLogin,
             userCategories, setUserCategories,
+            userCart, setUserCart,
             systemCategories,
             productsList
         },
