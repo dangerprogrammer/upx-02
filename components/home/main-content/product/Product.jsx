@@ -16,7 +16,7 @@ function Product({systemCategories, categorie, product: {name, Desc, price, phot
             <span>{productCategorie.name}</span>
         </div>
         <h3 className={wrapLines}>{name}</h3>
-        <h2 className={`${important} ${greenColor}`}>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})}</h2>
+        <h2 className={greenColor}>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})}</h2>
         <h4 className={localStyles}><Home/>{local}</h4>
         <p>
             <Desc className={wrapLines} style={{'--wrap': 3}}/>

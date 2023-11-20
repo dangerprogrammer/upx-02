@@ -1,11 +1,11 @@
-import { navbar, searchbarContainer, searchbar, searchContainer, searchIcon, personContainer, menuContainer, hideMenu } from './Navbar.module.scss';
+import { navbar, searchbarContainer, searchbar, searchContainer, searchIcon, personContainer, menuContainer, hideMenu, navShadow } from './Navbar.module.scss';
 import SearchIcon from '@/assets/svgs/search.svg';
 import MenuIcon from '@/assets/svgs/menu-outline.svg';
 import LogoutIcon from '@/assets/svgs/log-out-outline.svg';
 import logout from '@/scripts/logout';
 
-function Navbar({ setFiltredProducts, filtedCategories }) {
-    return <nav className={navbar}>
+function Navbar({ shadow, setFiltredProducts, filtedCategories }) {
+    return <nav className={`${navbar}${shadow ? ` ${navShadow}` : ''}`}>
         <main className={searchContainer}>
             <section className={searchbarContainer}>
                 <SearchIcon className={searchIcon}/>

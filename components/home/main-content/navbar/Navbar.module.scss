@@ -5,10 +5,18 @@
     justify-content: space-between;
     width: 100%;
     z-index: 10;
-    position: absolute;
     background: linear-gradient(to top, transparent, #eee);
     padding: .5em 2rem;
     padding-top: 1.5em;
+
+    &.navShadow {
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    &:not(.navShadow) {
+        position: absolute;
+    }
 }
 
 .searchbarContainer {

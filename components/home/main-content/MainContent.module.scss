@@ -1,21 +1,25 @@
 .mainContent {
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     height: 100vh;
     width: 100vw;
 }
 
 .gridProducts {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    padding: 2rem;
-    padding-top: 5rem;
+    flex-direction: column;
+    padding-inline: 2rem;
     overflow-y: auto;
     height: 100%;
+
+    > ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
 
     > h1 {
         height: 100%;

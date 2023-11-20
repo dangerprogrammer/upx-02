@@ -4,8 +4,16 @@
     padding: 1em;
     bottom: 0;
     z-index: 10;
-    position: absolute;
     background: linear-gradient(to bottom, transparent, #eee);
+
+    &.shadowFooter {
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    &:not(.shadowFooter) {
+        position: absolute;
+    }
 }
 
 .backCategories {

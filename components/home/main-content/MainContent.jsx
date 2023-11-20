@@ -14,7 +14,13 @@ function MainContent({productsList, userCategories, systemCategories, ...context
         <Navbar {...{...contexts, setFiltredProducts, filtedCategories}}/>
         <section className={gridProducts}>
             {filtredProducts.length
-            ? filtredProducts.map(({ ...context }, ind) => <Product { ...{...context, systemCategories} } key={ind}/>)
+            ? <>
+                <Navbar {...{...contexts, setFiltredProducts, filtedCategories}} shadow/>
+                <ul>
+                    {filtredProducts.map(({ ...context }, ind) => <Product { ...{...context, systemCategories} } key={ind}/>)}
+                </ul>
+                <Footer shadow/>
+            </>
             : <h1>Não há produtos disponíveis!</h1>}
         </section>
         <Footer />

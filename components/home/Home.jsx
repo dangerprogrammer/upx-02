@@ -3,9 +3,6 @@ import MainContent from './main-content/MainContent';
 import Sidebar from './sidebar/Sidebar';
 
 function Home({ given_name, ...contexts }) {
-    console.clear();
-    console.log(contexts);
-    
     return given_name ? <main className={homeContainer}>
         <Sidebar {...{...contexts, given_name}}/>
         <MainContent { ...contexts }/>
