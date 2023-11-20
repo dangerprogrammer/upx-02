@@ -21,7 +21,7 @@ function ProductContainer({systemCategories, categorie, product: {name, Desc, pr
                     </div>
                     <h1 className={greenColor}>{realCash(price)}</h1>
                     <p className={description}>
-                        <Desc/>
+                        "<Desc/>"
                     </p>
                 </span>
                 <BackPage shadow addClass={` ${responsiveShadow}`}/>
