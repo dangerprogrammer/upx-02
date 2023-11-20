@@ -73,18 +73,30 @@
     > button {
         cursor: pointer;
         border-radius: .5em;
-        font-size: 1.3em;
-        padding: .5em 2em;
-        text-transform: uppercase;
-        letter-spacing: .1em;
+        font-size: 1.2em;
+        padding: .35em 1.5em;
+        font-weight: 600;
+        letter-spacing: .025em;
 
         &.cart {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
             background: #e0e0e0;
+            font-size: 1.1em;
+
+            > svg {
+                font-size: 1.5em;
+            }
         }
 
         &:not(.cart) {
             background: #08f;
             color: #eee;
+            opacity: .5;
+            pointer-events: none;
         }
     }
 }

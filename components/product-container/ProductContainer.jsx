@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { cart, paymentRequest, responsiveShadow, resRevShadow, pageContainer, mainProduct, categorieName, photoStyles, shadow, greenColor, description, paymentMethod, grid, localStyles } from './ProductContainer.module.scss';
 import BackPage from "@/components/back-page/BackPage";
 import Home from '@/assets/svgs/home-outline.svg';
+import Cart from '@/assets/svgs/cart-outline.svg';
 import realCash from '@/scripts/realCash';
 
 function ProductContainer({systemCategories, categorie, product: {name, Desc, price, photo}, user, local}) {
@@ -38,7 +39,7 @@ function ProductContainer({systemCategories, categorie, product: {name, Desc, pr
                         </div>
                     </section>
                     <section className={paymentRequest}>
-                        <button className={cart}>Adicionar ao carrinho</button>
+                        <button className={cart}>Adicionar ao carrinho<Cart/></button>
                         <button>Comprar Agora</button>
                     </section>
                     <p>
