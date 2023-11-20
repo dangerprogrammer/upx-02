@@ -6,6 +6,10 @@
     width: 100vw;
 }
 
+.hiddenText {
+    visibility: hidden;
+}
+
 .gridProducts {
     display: flex;
     flex-direction: column;

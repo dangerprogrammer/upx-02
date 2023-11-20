@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { mainContent, gridProducts } from './MainContent.module.scss';
+import { mainContent, gridProducts, hiddenText } from './MainContent.module.scss';
 import Footer from './footer/Footer';
 import Navbar from './navbar/Navbar';
 import Product from './product/Product';
@@ -8,8 +8,11 @@ import filterOptions from '@/scripts/filterOptions';
 function MainContent({productsList, userCategories, systemCategories, ...contexts}) {
     const filtredCategories = productsList.filter(({categorie}) => userCategories.find(userCat => userCat == categorie)),
         [filtredProducts, setFiltredProducts] = useState(filtredCategories),
-        [searchValue, setSearchValue] = useState(''),
-        [filter, setFilter] = useState('none');
+        initialSearchValue = '',
+        [searchValue, setSearchValue] = useState(initialSearchValue),
+        initialFilter = 'none',
+        [filter, setFilter] = useState(initialFilter),
+        [showSearch, setShowSearch] = useState(!1);
 
     useEffect(() => setFiltredProducts(() => {
         return productsList
@@ -18,9 +21,7 @@ function MainContent({productsList, userCategories, systemCategories, ...context
         .filter(filterOptions[filter])
     }), [userCategories, searchValue, filter]);
 
-    useEffect(() => {
-        console.log(filter);
-    }, [filter]);
+    useEffect(() => setShowSearch(() => searchValue != initialSearchValue || filter != initialFilter), [searchValue, filter]);
     
     return <main className={mainContent}>
         <Navbar {...{...contexts, setSearchValue, setFilter}}/>
@@ -28,7 +29,7 @@ function MainContent({productsList, userCategories, systemCategories, ...context
             {filtredProducts.length
             ? <>
                 <Navbar {...{...contexts, setFiltredProducts}} shadow/>
-                <h4>Resultados da pesquisa: {filtredProducts.length}</h4>
+                <h4 className={showSearch ? null : hiddenText}>Resultados da pesquisa (ou filtro): {filtredProducts.length}</h4>
                 <ul>
                     {filtredProducts.map(({ ...context }, ind) => <Product { ...{...context, systemCategories} } key={ind}/>)}
                 </ul>
