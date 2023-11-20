@@ -34,6 +34,10 @@
         gap: .4em;
         user-select: none;
 
+        > input {
+            display: none;
+        }
+
         > * {
             cursor: pointer;
             padding-inline: .6em;
@@ -41,6 +45,12 @@
             border-radius: .2em;
             text-align: center;
             background: #e0e0e0ac;
+            transition: .2s;
+
+            &:checked + label {
+                background: #08f;
+                color: #eee;
+            }
         }
     }
 }

@@ -28,8 +28,10 @@ function ProductContainer({systemCategories, categorie, product: {name, Desc, pr
                 <section className={paymentMethod}>
                     <p>Selecione a forma de pagamento</p>
                     <div className={grid}>
-                        <span>Cartão</span>
-                        <span>Dinheiro</span>
+                        <input type="radio" name="payment-method" id="debit"/>
+                        <label htmlFor="debit">Cartão</label>
+                        <input type="radio" name="payment-method" id="cash"/>
+                        <label htmlFor="cash">Dinheiro</label>
                     </div>
                 </section>
                 <p>
