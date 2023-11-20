@@ -47,8 +47,9 @@
 
     > div:not([class]) {
         position: relative;
-        width: 80%;
+        aspect-ratio: 1 / 1;
         overflow: hidden;
+        border-radius: 1rem;
 
         img {
             height: 100%;
