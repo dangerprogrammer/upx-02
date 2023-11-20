@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { pageContainer, mainProduct, categorieName, photoStyles, shadow, greenColor, description, paymentMethod, grid } from './ProductContainer.module.scss';
+import { pageContainer, mainProduct, categorieName, photoStyles, shadow, greenColor, description, paymentMethod, grid, localStyles } from './ProductContainer.module.scss';
 import BackPage from "@/components/back-page/BackPage";
-
+import Home from '@/assets/svgs/home-outline.svg';
 
 function ProductContainer({systemCategories, categorie, product: {name, Desc, price, photo}, user, local}) {
     const productCategorie = systemCategories.find(({ id }) => id == categorie);
@@ -32,6 +32,10 @@ function ProductContainer({systemCategories, categorie, product: {name, Desc, pr
                         <span>Dinheiro</span>
                     </div>
                 </section>
+                <p>
+                    <span>{user}</span>
+                    <h4 className={localStyles}><Home/>{local}</h4>
+                </p>
             </aside>
         </main>
         <BackPage shadow/>

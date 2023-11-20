@@ -1,4 +1,4 @@
-import { productStyles, imageStyles, localStyles, important, wrapLines, shadow, showHover, categorieName, greenColor } from './Product.module.scss';
+import { productStyles, imageStyles, localStyles, wrapLines, shadow, showHover, categorieName, greenColor } from './Product.module.scss';
 import Image from "next/image";
 import Home from '@/assets/svgs/home-outline.svg';
 import { useRouter } from 'next/navigation';
