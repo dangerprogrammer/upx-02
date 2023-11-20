@@ -1,3 +1,32 @@
 .pageContainer {
+    display: flex;
+    flex-direction: row;
+
+    > aside {
+        flex-shrink: 0;
+    }
+}
+
+.mainProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    gap: 1em;
+    padding-inline: 2em;
     background: red;
+}
+
+.categorieName {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    > * {
+        padding-inline: .6em;
+        font-weight: 700;
+        border-radius: .2em;
+        display: flex;
+        background: #c0c0c0ac;
+    }
 }

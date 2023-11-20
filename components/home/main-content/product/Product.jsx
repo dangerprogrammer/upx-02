@@ -4,7 +4,7 @@ import Home from '@/assets/svgs/home-outline.svg';
 import { useRouter } from 'next/navigation';
 
 function Product({systemCategories, categorie, product: {name, Desc, price, photo, id}, local}) {
-    const { push } = useRouter();
+    const { push } = useRouter(), productCategorie = systemCategories.find(({ id }) => id == categorie);
 
     return <li className={productStyles}>
         <div onClick={() => push(`/${id}`)}>
@@ -13,7 +13,7 @@ function Product({systemCategories, categorie, product: {name, Desc, price, phot
             <span className={showHover}>Ver produto!</span>
         </div>
         <div className={categorieName}>
-            <span>{systemCategories.find(({ id }) => id == categorie).name}</span>
+            <span>{productCategorie.name}</span>
         </div>
         <h3 className={wrapLines}>{name}</h3>
         <h2 className={`${important} ${greenColor}`}>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})}</h2>
