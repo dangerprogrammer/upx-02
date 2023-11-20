@@ -1,16 +1,13 @@
 'use client';
 
-import BackPage from "@/components/back-page/BackPage";
 import productsList from "@/components/context/productsList";
+import ProductContainer from "@/components/product-container/ProductContainer";
 
 function ProductPage({ params: {productID} }) {
     try {
         const { product: { name } } = productsList.find(({ product: {id} }) => id == productID);
 
-        return <>
-        <h1>{name}</h1>
-        <BackPage/>
-        </>
+        return <ProductContainer {...{name}}/>
     } catch (error) {
         return <>
         <h1>Erro!</h1>
