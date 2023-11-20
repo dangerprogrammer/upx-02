@@ -5,6 +5,7 @@ function setCart({ add, product, product: {id} }, { setUserCart }) {
         if (add) cloneCart.push(product);
         else cloneCart.splice(cartIDs.indexOf(id), 1);
 
+        console.log(cloneCart);
         return cloneCart;
     });
 };

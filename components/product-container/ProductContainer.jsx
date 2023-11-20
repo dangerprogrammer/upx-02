@@ -40,7 +40,7 @@ function ProductContainer({systemCategories, categorie, product, product: {name,
                         </div>
                     </section>
                     <section className={paymentRequest}>
-                        <button className={cart} onClick={() => setCart({ add, product }, { setUserCart })}>Adicionar ao carrinho<Cart/></button>
+                        <button className={cart} onClick={() => setCart({ add: !0, product }, { setUserCart })}>Adicionar ao carrinho<Cart/></button>
                         <button>Comprar Agora</button>
                     </section>
                     <p>
