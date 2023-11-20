@@ -21,7 +21,7 @@ function Navbar({ shadow, setSearchValue, setFilter }) {
                     <h4>Filtros</h4>
                     <button>Filtrar por
                         <select onChange={({ target: { options, selectedIndex } }) => setFilter(options[selectedIndex].value)}>
-                        <option value="none" selected>Nenhum</option>
+                        <option value="none" defaultValue>Nenhum</option>
                         <option value="price-under-200">Abaixo de {realCash(200)}</option>
                         <option value="price-upper-200">Acima de {realCash(200)}</option>
                         <option value="price-upper-400">Acima de {realCash(400)}</option>

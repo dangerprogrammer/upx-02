@@ -5,9 +5,19 @@ import Home from '@/assets/svgs/home-outline.svg';
 import Cart from '@/assets/svgs/cart-outline.svg';
 import realCash from '@/scripts/realCash';
 import setCart from './setCart';
+import { useState } from 'react';
 
-function ProductContainer({systemCategories, categorie, product, product: {name, Desc, price, photo}, user, local, setUserCart}) {
+function ProductContainer({systemCategories, categorie, product, product: {name, Desc, price, photo, id}, user, local, setUserCart}) {
     const productCategorie = systemCategories.find(({ id }) => id == categorie);
+    let userCart;
+
+    setUserCart(cart => {
+        userCart = cart;
+
+        return cart;
+    });
+
+    const [inCart, setInCart] = useState(userCart.find(({ id: cartID }) => cartID === id));
 
     return <div className={pageContainer}>
         <main>
@@ -40,7 +50,7 @@ function ProductContainer({systemCategories, categorie, product, product: {name,
                         </div>
                     </section>
                     <section className={paymentRequest}>
-                        <button className={cart} onClick={() => setCart({ add: !0, product }, { setUserCart })}>Adicionar ao carrinho<Cart/></button>
+                        <button className={cart} onClick={() => (setCart({ add: !inCart, product }, { setUserCart }), setInCart(cart => !cart))}>{inCart ? <>Remover do carrinho</> : <>Adicionar ao carrinho<Cart/></>}</button>
                         <button>Comprar Agora</button>
                     </section>
                     <p>
