@@ -13,6 +13,15 @@
     overflow-y: auto;
     height: 100%;
 
+    > h4 {
+        padding-block: .3em;
+        font-size: 1.2em;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     > ul {
         display: flex;
         flex-direction: row;

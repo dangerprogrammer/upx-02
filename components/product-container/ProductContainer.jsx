@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { pageContainer, mainProduct, categorieName, photoStyles, shadow, greenColor, description, paymentMethod, grid, localStyles } from './ProductContainer.module.scss';
 import BackPage from "@/components/back-page/BackPage";
 import Home from '@/assets/svgs/home-outline.svg';
+import realCash from '@/scripts/realCash';
 
 function ProductContainer({systemCategories, categorie, product: {name, Desc, price, photo}, user, local}) {
     const productCategorie = systemCategories.find(({ id }) => id == categorie);
@@ -18,7 +19,7 @@ function ProductContainer({systemCategories, categorie, product: {name, Desc, pr
                         <Image alt='Photo from product' src={photo} className={photoStyles}/>
                         <Image alt='Photo from product' src={photo} className={`${photoStyles} ${shadow}`}/>
                     </div>
-                    <h1 className={greenColor}>{price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})}</h1>
+                    <h1 className={greenColor}>{realCash(price)}</h1>
                     <p className={description}>
                         <Desc/>
                     </p>

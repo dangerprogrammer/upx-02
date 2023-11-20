@@ -3,6 +3,7 @@ import SearchIcon from '@/assets/svgs/search.svg';
 import MenuIcon from '@/assets/svgs/menu-outline.svg';
 import LogoutIcon from '@/assets/svgs/log-out-outline.svg';
 import logout from '@/scripts/logout';
+import realCash from '@/scripts/realCash';
 
 function Navbar({ shadow, setSearchValue, setFilter }) {
     return <nav className={`${navbar}${shadow ? ` ${navShadow}` : ''}`}>
@@ -19,9 +20,9 @@ function Navbar({ shadow, setSearchValue, setFilter }) {
                 <h4>Filtros</h4>
                 <button>Filtrar por <select onChange={({ target: { options, selectedIndex } }) => setFilter(options[selectedIndex].value)}>
                     <option value="none" selected>Nenhum</option>
-                    <option value="price-under-200">Abaixo de 200</option>
-                    <option value="price-upper-200">Acima de 200</option>
-                    <option value="price-upper-400">Acima de 400</option>
+                    <option value="price-under-200">Abaixo de {realCash(200)}</option>
+                    <option value="price-upper-200">Acima de {realCash(200)}</option>
+                    <option value="price-upper-400">Acima de {realCash(400)}</option>
                     <option value="phone">Celulares e Notebooks</option>
                     <option value="desktop">Desktops e TVs</option>
                     </select></button>

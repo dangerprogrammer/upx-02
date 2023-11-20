@@ -28,6 +28,7 @@ function MainContent({productsList, userCategories, systemCategories, ...context
             {filtredProducts.length
             ? <>
                 <Navbar {...{...contexts, setFiltredProducts}} shadow/>
+                <h4>Resultados da pesquisa: {filtredProducts.length}</h4>
                 <ul>
                     {filtredProducts.map(({ ...context }, ind) => <Product { ...{...context, systemCategories} } key={ind}/>)}
                 </ul>
