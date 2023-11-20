@@ -3,19 +3,31 @@ import { mainContent, gridProducts } from './MainContent.module.scss';
 import Footer from './footer/Footer';
 import Navbar from './navbar/Navbar';
 import Product from './product/Product';
+import filterOptions from '@/scripts/filterOptions';
 
 function MainContent({productsList, userCategories, systemCategories, ...contexts}) {
-    const filtedCategories = productsList.filter(({categorie}) => userCategories.find(userCat => userCat == categorie)),
-        [filtredProducts, setFiltredProducts] = useState(filtedCategories);
+    const filtredCategories = productsList.filter(({categorie}) => userCategories.find(userCat => userCat == categorie)),
+        [filtredProducts, setFiltredProducts] = useState(filtredCategories),
+        [searchValue, setSearchValue] = useState(''),
+        [filter, setFilter] = useState('none');
 
-    useEffect(() => setFiltredProducts(filtedCategories), [userCategories]);
+    useEffect(() => setFiltredProducts(() => {
+        return productsList
+        .filter(({categorie}) => userCategories.find(userCat => userCat == categorie))
+        .filter(({product: {name}}) => name.toLowerCase().includes(searchValue.toLowerCase()))
+        .filter(filterOptions[filter])
+    }), [userCategories, searchValue, filter]);
+
+    useEffect(() => {
+        console.log(filter);
+    }, [filter]);
     
     return <main className={mainContent}>
-        <Navbar {...{...contexts, setFiltredProducts, filtedCategories}}/>
+        <Navbar {...{...contexts, setSearchValue, setFilter}}/>
         <section className={gridProducts}>
             {filtredProducts.length
             ? <>
-                <Navbar {...{...contexts, setFiltredProducts, filtedCategories}} shadow/>
+                <Navbar {...{...contexts, setFiltredProducts}} shadow/>
                 <ul>
                     {filtredProducts.map(({ ...context }, ind) => <Product { ...{...context, systemCategories} } key={ind}/>)}
                 </ul>

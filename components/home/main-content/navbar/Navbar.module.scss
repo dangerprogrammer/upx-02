@@ -105,14 +105,19 @@
         }
 
         button {
-            cursor: pointer;
             display: flex;
             align-items: center;
             gap: .5em;
             border-radius: .5em;
             font-weight: 600;
-            width: 8em;
+            min-width: 8em;
             padding: .5em 1em;
+        }
+
+        select {
+            outline: none !important;
+            border-radius: .3em;
+            cursor: pointer;
         }
     }
 
@@ -135,6 +140,10 @@
     > *:not(.menuContainer) {
         pointer-events: none;
     }
+}
+
+.logoutButton {
+    cursor: pointer;
 }
 
 .searchContainer {
