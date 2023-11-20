@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { responsiveShadow, resRevShadow, pageContainer, mainProduct, categorieName, photoStyles, shadow, greenColor, description, paymentMethod, grid, localStyles } from './ProductContainer.module.scss';
+import { cart, paymentRequest, responsiveShadow, resRevShadow, pageContainer, mainProduct, categorieName, photoStyles, shadow, greenColor, description, paymentMethod, grid, localStyles } from './ProductContainer.module.scss';
 import BackPage from "@/components/back-page/BackPage";
 import Home from '@/assets/svgs/home-outline.svg';
 import realCash from '@/scripts/realCash';
@@ -37,7 +37,10 @@ function ProductContainer({systemCategories, categorie, product: {name, Desc, pr
                             <label htmlFor="cash">Dinheiro</label>
                         </div>
                     </section>
-                    <button>Comprar Agora</button>
+                    <section className={paymentRequest}>
+                        <button className={cart}>Adicionar ao carrinho</button>
+                        <button>Comprar Agora</button>
+                    </section>
                     <p>
                         <span>{user}</span>
                         <h4 className={localStyles}><Home/>{local}</h4>

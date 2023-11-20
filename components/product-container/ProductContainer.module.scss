@@ -28,17 +28,6 @@
                 max-width: 32rem;
                 width: 100%;
                 gap: 1em;
-
-                > button {
-                    cursor: pointer;
-                    background: #08f;
-                    border-radius: .5em;
-                    font-size: 1.3em;
-                    color: #eee;
-                    padding: .5em 2em;
-                    text-transform: uppercase;
-                    letter-spacing: .1em;
-                }
             }
         }
     }
@@ -72,6 +61,30 @@
                 background: #082;
                 color: #eee;
             }
+        }
+    }
+}
+
+.paymentRequest {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+
+    > button {
+        cursor: pointer;
+        border-radius: .5em;
+        font-size: 1.3em;
+        padding: .5em 2em;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+
+        &.cart {
+            background: #e0e0e0;
+        }
+
+        &:not(.cart) {
+            background: #08f;
+            color: #eee;
         }
     }
 }
