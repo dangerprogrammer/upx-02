@@ -48,7 +48,7 @@
         .gridCategories {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-            gap: 1rem;
+            gap: 1.5rem;
             max-width: 75rem;
             width: 100%;
         }

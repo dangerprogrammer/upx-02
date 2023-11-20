@@ -7,14 +7,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1em 2em;
-    aspect-ratio: 9 / 11;
+    padding: 1.5em;
+    gap: 1em;
     list-style: none;
     background: #ddda;
     transition: .2s ease-in-out;
     user-select: none;
     outline: .3rem solid transparent;
-    scale: .97;
 
     &.activedCategorie {
         outline-color: #08f;
