@@ -1,5 +1,5 @@
 .mainContainer {
-    background: #111;
+    background: #eee;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,7 +28,7 @@
     width: 100%;
     opacity: .5;
     mix-blend-mode: color-dodge;
-    background: #1c1c1c;
+    background: #fff;
     pointer-events: none;
 }
 
@@ -39,7 +39,7 @@
     justify-content: space-around;
     align-items: center;
     padding: 1.5em 2em;
-    color: #eee;
+    color: #111;
     height: 100%;
     z-index: 10;
     gap: 3rem;
@@ -60,7 +60,7 @@
         .loginInput {
             background: transparent;
             outline: none !important;
-            border: 2px solid #888;
+            border: 2px solid #bbb;
             border-radius: 0.5rem;
             padding: 0.55rem 1.3rem;
             width: 100%;
@@ -69,13 +69,12 @@
             transition: .2s ease;
 
             &:focus {
-                border-color: #80ff80;
+                border-color: #08f;
             }
         }
 
         .submitButton {
-            background: transparent;
-            border: 2px solid #00ae00;
+            background: #08f;
             color: #eee;
             padding: 1rem 2rem;
             border-radius: .75rem;
@@ -89,10 +88,7 @@
             z-index: 100;
 
             &:hover {
-                border-radius: 1.25rem;
-                letter-spacing: .35rem;
-                border-color: #00ff80;
-                box-shadow: 0 .2rem .8rem #00ff8090;
+                background: #c0c0c0;
             }
 
             > * {

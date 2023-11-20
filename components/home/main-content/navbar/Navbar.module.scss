@@ -92,6 +92,7 @@
         right: 0;
         display: flex;
         flex-direction: column;
+        gap: .75em;
         align-items: flex-start;
         transform: translate(-2rem, 100%);
         background: white;
@@ -99,6 +100,12 @@
         font-size: .75em;
         transition: .2s ease-in-out;
         border-radius: .5em;
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
         h4 {
             font-size: .9rem;
@@ -118,6 +125,7 @@
             outline: none !important;
             border-radius: .3em;
             text-align: center;
+            font-weight: 700;
             cursor: pointer;
         }
     }

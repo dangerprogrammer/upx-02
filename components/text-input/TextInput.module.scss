@@ -16,9 +16,9 @@
         text-transform: uppercase;
         pointer-events: none;
         letter-spacing: .05rem;
-        color: #888;
+        color: #eee;
         border-radius: .5em;
-        background: #222;
+        background: #08f;
     }
 
     input {
@@ -26,18 +26,20 @@
     }
 
     &:has(input:focus) label {
-        border-left-color: #80ff80;
-        border-right-color: #80ff80;
+        border-left-color: #08f;
+        border-right-color: #08f;
+        background: #08f;
     }
 
     &:has(input:valid:not(:focus)) label {
-        border-left-color: #888;
-        border-right-color: #888;
+        border-left-color: #bbb;
+        border-right-color: #bbb;
+        background: #bbb;
+        color: #111;
     }
 
     &:has(input:focus, input:valid) label {
         top: 0;
         font-size: .8em;
-        color: #80ff80;
     }
 }

@@ -17,17 +17,23 @@ function Navbar({ shadow, setSearchValue, setFilter }) {
         <button className={personContainer} onClick={({ target }) => target.classList.toggle(hideMenu)}>
             <MenuIcon/>
             <main className={menuContainer}>
-                <h4>Filtros</h4>
-                <button>Filtrar por <select onChange={({ target: { options, selectedIndex } }) => setFilter(options[selectedIndex].value)}>
-                    <option value="none" selected>Nenhum</option>
-                    <option value="price-under-200">Abaixo de {realCash(200)}</option>
-                    <option value="price-upper-200">Acima de {realCash(200)}</option>
-                    <option value="price-upper-400">Acima de {realCash(400)}</option>
-                    <option value="phone">Celulares e Notebooks</option>
-                    <option value="desktop">Desktops e TVs</option>
-                    </select></button>
-                <h4>Conta</h4>
-                <button className={logoutButton} onClick={logout}><LogoutIcon/>Logout</button>
+                <div>
+                    <h4>Filtros</h4>
+                    <button>Filtrar por
+                        <select onChange={({ target: { options, selectedIndex } }) => setFilter(options[selectedIndex].value)}>
+                        <option value="none" selected>Nenhum</option>
+                        <option value="price-under-200">Abaixo de {realCash(200)}</option>
+                        <option value="price-upper-200">Acima de {realCash(200)}</option>
+                        <option value="price-upper-400">Acima de {realCash(400)}</option>
+                        <option value="phone">Celulares e Notebooks</option>
+                        <option value="desktop">Desktops e TVs</option>
+                        </select>
+                    </button>
+                </div>
+                <div>
+                    <h4>Conta</h4>
+                    <button className={logoutButton} onClick={logout}><LogoutIcon/>Logout</button>
+                </div>
             </main>
         </button>
     </nav>
