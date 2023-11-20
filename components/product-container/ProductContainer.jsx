@@ -27,23 +27,25 @@ function ProductContainer({systemCategories, categorie, product: {name, Desc, pr
                 <BackPage shadow addClass={` ${responsiveShadow}`}/>
             </main>
             <aside>
-                <section className={paymentMethod}>
-                    <p>Selecione a forma de pagamento</p>
-                    <div className={grid}>
-                        <input type="radio" name="payment-method" id="debit" defaultChecked/>
-                        <label htmlFor="debit">Cartão</label>
-                        <input type="radio" name="payment-method" id="cash"/>
-                        <label htmlFor="cash">Dinheiro</label>
-                    </div>
-                </section>
-                <button>Comprar Agora</button>
-                <p>
-                    <span>{user}</span>
-                    <h4 className={localStyles}><Home/>{local}</h4>
-                </p>
+                <span>
+                    <section className={paymentMethod}>
+                        <p>Selecione a forma de pagamento</p>
+                        <div className={grid}>
+                            <input type="radio" name="payment-method" id="debit" defaultChecked/>
+                            <label htmlFor="debit">Cartão</label>
+                            <input type="radio" name="payment-method" id="cash"/>
+                            <label htmlFor="cash">Dinheiro</label>
+                        </div>
+                    </section>
+                    <button>Comprar Agora</button>
+                    <p>
+                        <span>{user}</span>
+                        <h4 className={localStyles}><Home/>{local}</h4>
+                    </p>
+                </span>
+                <BackPage shadow addClass={` ${resRevShadow}`}/>
             </aside>
         </main>
-        {/* <BackPage shadow addClass={` ${resRevShadow}`}/> */}
         <BackPage/>
     </div>
 };
