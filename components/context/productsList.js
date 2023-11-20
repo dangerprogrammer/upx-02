@@ -17,7 +17,7 @@ import product16 from "@/public/imgs/product-16.webp";
 
 const productsList = [
     {
-        categorie: 'damaged-eletronic',
+        categorie: 'acessories',
         product: {
             name: 'Placa Mãe Dell Optiplex 380 Dt Pn Fr6wh Funcionando Ok',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -32,7 +32,7 @@ const productsList = [
         },
         user: 'Marian Lima Carvalho', local: 'Santarém, Para(PA)'
     }, {
-        categorie: 'damaged-eletronic',
+        categorie: 'acessories',
         product: {
             name: 'Disco sólido interno Western Digital WD Green WDS480G2G0B 480GB verde (seminovo)',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -76,7 +76,7 @@ const productsList = [
         },
         user: 'Marcos Augusto da Silva', local: 'Guarulhos, São Paulo (SP)'
     }, {
-        categorie: 'damaged-eletronic',
+        categorie: 'redirect',
         product: {
             name: 'Notebook Positivo',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -86,7 +86,7 @@ const productsList = [
         },
         user: 'Victor Gabriel Santos Silva', local: 'São José, Santa Catarina (SP)'
     }, {
-        categorie: 'damaged-eletronic',
+        categorie: 'redirect',
         product: {
             name: 'Smartphone Samsung A22',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -116,7 +116,7 @@ const productsList = [
         },
         user: 'Pedro Henrique da Silva Costa', local: 'Recife, Pernambuco (PE)'
     }, {
-        categorie: 'damaged-eletronic',
+        categorie: 'acessories',
         product: {
             name: 'Vendo Placa Mãe para Notebook Samsung NP275E4E/BA41-02239A.',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -164,7 +164,7 @@ const productsList = [
         },
         user: 'Beatriz da Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
-        categorie: 'damaged-eletronic',
+        categorie: 'redirect',
         product: {
             name: 'Dell MT-G90BK',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -197,7 +197,7 @@ const productsList = [
         },
         user: 'Carol Alves Peres', local: 'Sorocaba, São Paulo (SP)'
     }, {
-        categorie: 'damaged-eletronic',
+        categorie: 'redirect',
         product: {
             name: 'Televisor Philips',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -207,7 +207,7 @@ const productsList = [
         },
         user: 'Marcos Silva Oliveira', local: 'Sorocaba, São Paulo (SP)'
     }, {
-        categorie: 'damaged-eletronic',
+        categorie: 'redirect',
         product: {
             name: 'Notebook Hp I7 Envy',
             Desc: ({ ...contexts }) => <span { ...contexts }>
