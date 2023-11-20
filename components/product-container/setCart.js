@@ -1,13 +1,13 @@
 function setCart({ add, product, product: {id} }, { setUserCart }) {
     setUserCart(userCart => {
-        const cloneCart = [...userCart], cartIDs = cloneCart.map(({ id }) => id);
+        const cartIDs = userCart.map(({ id }) => id);
 
         if (add) {
-            if (cartIDs.indexOf(id) === -1) cloneCart.push(product);
-        } else cloneCart.splice(cartIDs.indexOf(id), 1);
+            if (cartIDs.indexOf(id) === -1) userCart.push(product);
+        } else userCart.splice(cartIDs.indexOf(id), 1);
 
-        console.log(cloneCart);
-        return cloneCart;
+        localStorage.setItem('user-cart', JSON.stringify(userCart));
+        return userCart;
     });
 };
 
