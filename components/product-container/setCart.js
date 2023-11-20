@@ -1,9 +1,9 @@
-function setCart({ add, product }, { setUserCart }) {
+function setCart({ add, product, product: {id} }, { setUserCart }) {
     setUserCart(userCart => {
-        const cloneCart = [...userCart];
+        const cloneCart = [...userCart], cartIDs = cloneCart.map(({ id }) => id);
 
         if (add) cloneCart.push(product);
-        else cloneCart.splice(0, 1);
+        else cloneCart.splice(cartIDs.indexOf(id), 1);
 
         return cloneCart;
     });
