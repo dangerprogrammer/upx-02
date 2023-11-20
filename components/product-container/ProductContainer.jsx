@@ -34,6 +34,7 @@ function ProductContainer({systemCategories, categorie, product: {name, Desc, pr
                         <label htmlFor="cash">Dinheiro</label>
                     </div>
                 </section>
+                <button>Comprar Agora</button>
                 <p>
                     <span>{user}</span>
                     <h4 className={localStyles}><Home/>{local}</h4>
