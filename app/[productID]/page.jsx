@@ -1,12 +1,15 @@
 'use client';
 
 import { ContextApp } from "@/components/context/ContextApp";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import productsList from "@/components/context/productsList";
 import ProductContainer from "@/components/product-container/ProductContainer";
+import onLoadedPage from "@/scripts/onLoadedPage";
 
 function ProductPage({ params: {productID} }) {
     const { ...contexts } = useContext(ContextApp);
+
+    useEffect(() => onLoadedPage({ ...contexts }), []);
 
     try {
         const { ...productContexts } = productsList.find(({ product: {id} }) => id == productID);

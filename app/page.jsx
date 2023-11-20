@@ -6,11 +6,11 @@ import Home from "@/components/home/Home";
 import onLoadedPage from "@/scripts/onLoadedPage";
 
 function HomePage() {
-  const { login, setLogin, setUserCategories, ...contexts } = useContext(ContextApp);
+  const { ...contexts } = useContext(ContextApp);
 
-  useEffect(() => onLoadedPage({ login, setLogin, setUserCategories }), []);
+  useEffect(() => onLoadedPage({ ...contexts }), []);
 
-  return <Home { ...{...login, ...contexts, setUserCategories, setLogin} }/>
+  return <Home { ...contexts }/>
 };
 
 export default HomePage;

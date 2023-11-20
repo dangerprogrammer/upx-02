@@ -1,8 +1,7 @@
 function logout() {
-    localStorage.removeItem('user-data');
-    localStorage.removeItem('user-categories');
+    localStorage.clear();
 
-    window.location.reload();
+    location.reload();
 };
 
 export default logout;
