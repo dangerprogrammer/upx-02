@@ -8,7 +8,6 @@ function verifyLogin(setLogin) {
     if (name.length && email.length) {
         const data = {email, name, given_name: name.split(' ')[0], uniqueID: generateID(allChars)};
 
-        console.log(data.uniqueID);
         localStorage.setItem('user-data', JSON.stringify(data));
         setLogin(data);
         return redirect('/');
