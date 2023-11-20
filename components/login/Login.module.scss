@@ -22,16 +22,6 @@
     filter: drop-shadow(0rem 0.25rem 1rem #0003);
 }
 
-.backgroundContainer {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    opacity: .5;
-    mix-blend-mode: color-dodge;
-    background: #fff;
-    pointer-events: none;
-}
-
 .formContent {
     position: relative;
     display: flex;
@@ -93,15 +83,6 @@
 
             > * {
                 pointer-events: none;
-            }
-
-            .palmStyles {
-                position: absolute;
-
-                img {
-                    height: 1em;
-                    width: 1em;
-                }
             }
         }
     }
