@@ -1,10 +1,13 @@
 import { loadingLogin } from '@/styles/login.module.scss';
 import { redirect } from 'next/navigation';
+import generateID from './generateUniqueID';
 
 function responseLogin(credential, googleLoginButton, setLogin) {
     if (!jwt_decode) return;
 
     const data = jwt_decode(credential);
+
+    data.uniqueID = generateID();
 
     localStorage.setItem('user-data', JSON.stringify(data));
 
