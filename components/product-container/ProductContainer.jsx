@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { pageContainer, mainProduct, categorieName, photoStyles, shadow, greenColor, description, paymentMethod, grid, localStyles } from './ProductContainer.module.scss';
+import { responsiveShadow, resRevShadow, pageContainer, mainProduct, categorieName, photoStyles, shadow, greenColor, description, paymentMethod, grid, localStyles } from './ProductContainer.module.scss';
 import BackPage from "@/components/back-page/BackPage";
 import Home from '@/assets/svgs/home-outline.svg';
 import realCash from '@/scripts/realCash';
@@ -24,6 +24,7 @@ function ProductContainer({systemCategories, categorie, product: {name, Desc, pr
                         <Desc/>
                     </p>
                 </span>
+                <BackPage shadow addClass={` ${responsiveShadow}`}/>
             </main>
             <aside>
                 <section className={paymentMethod}>
@@ -42,7 +43,7 @@ function ProductContainer({systemCategories, categorie, product: {name, Desc, pr
                 </p>
             </aside>
         </main>
-        <BackPage shadow/>
+        {/* <BackPage shadow addClass={` ${resRevShadow}`}/> */}
         <BackPage/>
     </div>
 };
