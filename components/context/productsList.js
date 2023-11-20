@@ -18,6 +18,7 @@ import product16 from "@/public/imgs/product-16.webp";
 const productsList = [
     {
         categorie: 'acessories',
+        keywords: [],
         product: {
             name: 'Placa Mãe Dell Optiplex 380 Dt Pn Fr6wh Funcionando Ok',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -33,6 +34,7 @@ const productsList = [
         user: 'Marian Lima Carvalho', local: 'Santarém, Para(PA)'
     }, {
         categorie: 'acessories',
+        keywords: [],
         product: {
             name: 'Disco sólido interno Western Digital WD Green WDS480G2G0B 480GB verde (seminovo)',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -50,6 +52,7 @@ const productsList = [
         user: 'Wellington Silva de Souza', local: 'Balneário Camboriú, Santa Catarina (SC)'
     }, {
         categorie: 'damaged-eletronic',
+        keywords: ['tv'],
         product: {
             name: 'Smart Tv 32 Android Wifi Bluetooth Bivolt Com Pixel Queimado',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -77,6 +80,7 @@ const productsList = [
         user: 'Marcos Augusto da Silva', local: 'Guarulhos, São Paulo (SP)'
     }, {
         categorie: 'redirect',
+        keywords: ['notebook'],
         product: {
             name: 'Notebook Positivo',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -87,6 +91,7 @@ const productsList = [
         user: 'Victor Gabriel Santos Silva', local: 'São José, Santa Catarina (SP)'
     }, {
         categorie: 'redirect',
+        keywords: ['phone'],
         product: {
             name: 'Smartphone Samsung A22',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -97,6 +102,7 @@ const productsList = [
         user: 'Isadora Santos', local: ' São Caetano do Sul, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
+        keywords: ['phone'],
         product: {
             name: 'IPAD',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -107,6 +113,7 @@ const productsList = [
         user: 'Maria Eduarda Costa', local: 'Piedade, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
+        keywords: ['notebook'],
         product: {
             name: 'Notebook Asus ×44c',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -117,6 +124,7 @@ const productsList = [
         user: 'Pedro Henrique da Silva Costa', local: 'Recife, Pernambuco (PE)'
     }, {
         categorie: 'acessories',
+        keywords: [],
         product: {
             name: 'Vendo Placa Mãe para Notebook Samsung NP275E4E/BA41-02239A.',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -145,6 +153,7 @@ const productsList = [
         user: 'Beatriz Gomes', local: 'São Paulo, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
+        keywords: ['phone'],
         product: {
             name: 'galaxy win duos',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -155,6 +164,7 @@ const productsList = [
         user: 'Jordan dos Santos Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
+        keywords: ['notebook'],
         product: {
             name: 'Pavilion dv7',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -165,6 +175,7 @@ const productsList = [
         user: 'Beatriz da Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'redirect',
+        keywords: ['notebook'],
         product: {
             name: 'Dell MT-G90BK',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -178,6 +189,7 @@ const productsList = [
         user: 'Paulo Machado Rocha Silva', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
+        keywords: ['phone'],
         product: {
             name: 'Samsung j7',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -188,6 +200,7 @@ const productsList = [
         user: 'Douglas Pereira Ramos', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
+        keywords: ['phone'],
         product: {
             name: 'Tablet Bak 784',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -198,6 +211,7 @@ const productsList = [
         user: 'Carol Alves Peres', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'redirect',
+        keywords: ['tv'],
         product: {
             name: 'Televisor Philips',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -208,6 +222,7 @@ const productsList = [
         user: 'Marcos Silva Oliveira', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'redirect',
+        keywords: ['notebook'],
         product: {
             name: 'Notebook Hp I7 Envy',
             Desc: ({ ...contexts }) => <span { ...contexts }>
@@ -226,6 +241,7 @@ const productsList = [
         user: 'Antonio Gonçalves', local: 'Sorocaba, São Paulo (SP)'
     }, {
         categorie: 'damaged-eletronic',
+        keywords: ['phone'],
         product: {
             name: 'Tablet m8w pkus5 plus',
             Desc: ({ ...contexts }) => <span { ...contexts }>

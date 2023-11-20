@@ -22,8 +22,8 @@ function Navbar({ shadow, setSearchValue, setFilter }) {
                     <option value="price-under-200">Abaixo de 200</option>
                     <option value="price-upper-200">Acima de 200</option>
                     <option value="price-upper-400">Acima de 400</option>
-                    <option value="phone">Celulares</option>
-                    <option value="desktop">Desktops</option>
+                    <option value="phone">Celulares e Notebooks</option>
+                    <option value="desktop">Desktops e TVs</option>
                     </select></button>
                 <h4>Conta</h4>
                 <button className={logoutButton} onClick={logout}><LogoutIcon/>Logout</button>
