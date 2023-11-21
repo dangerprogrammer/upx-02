@@ -1,11 +1,19 @@
-import { productStyles, imageStyles, localStyles, wrapLines, shadow, showHover, categorieName, greenColor } from './Product.module.scss';
+import { cart, productStyles, imageStyles, localStyles, wrapLines, shadow, showHover, categorieName, greenColor, removeCartStyles, restoreCart } from './Product.module.scss';
 import Image from "next/image";
 import Home from '@/assets/svgs/home-outline.svg';
+import Cart from '@/assets/svgs/cart-outline.svg';
+import Trash from '@/assets/svgs/trash-outline.svg';
 import { useRouter } from 'next/navigation';
 import realCash from '@/scripts/realCash';
+import { useEffect, useState } from 'react';
 
-function Product({systemCategories, cartText, categorie, product: {name, Desc, price, photo, id}, local, removeCart}) {
-    const { push } = useRouter(), productCategorie = systemCategories.find(({ id }) => id == categorie);
+function Product({systemCategories, categorie, product: {name, Desc, price, photo, id}, local, removeCart}) {
+    const { push } = useRouter(), productCategorie = systemCategories.find(({ id }) => id == categorie),
+        [inCart, setInCart] = useState(!0);
+
+    useEffect(() => {
+        console.log("atualizou!", inCart);
+    }, inCart);
 
     return <li className={productStyles}>
         <div onClick={() => push(`/${id}`)}>
@@ -22,7 +30,7 @@ function Product({systemCategories, cartText, categorie, product: {name, Desc, p
         <p>
             <Desc className={wrapLines} style={{'--wrap': 3}}/>
         </p>
-        {removeCart ? <button onClick={removeCart}>{cartText}</button> : null}
+        {removeCart ? <button className={`${cart} ${inCart ? removeCartStyles : restoreCart}`} onClick={() => (removeCart(inCart), setInCart(cart => !cart))}>{inCart ? <>Remover do carrinho<Trash/></> : <>Restaurar<Cart/></>}</button> : null}
     </li>
 };
 

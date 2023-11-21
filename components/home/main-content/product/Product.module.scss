@@ -130,3 +130,35 @@
         flex-shrink: 0;
     }
 }
+
+.cart {
+    cursor: pointer;
+    border-radius: .5em;
+    font-size: 1.2em;
+    padding: .35em 1.5em;
+    font-weight: 600;
+    letter-spacing: .025em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    background: #e0e0e0;
+    transition: .2s ease-in-out;
+
+    > svg {
+        font-size: 1.5em;
+    }
+
+    &:hover {
+        background: #f13;
+        color: #eee;
+    }
+}
+
+.removeCartStyles {
+    &:hover {
+        background: #f13;
+        color: #eee;
+    }
+}
