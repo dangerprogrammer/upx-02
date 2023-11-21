@@ -34,6 +34,7 @@
             padding: .35em 1.2em;
             display: flex;
             align-items: center;
+            gap: .5em;
             justify-content: flex-end;
             font-size: 1.15em;
             font-weight: 700;
@@ -46,6 +47,7 @@
             &:not(.allActive) {
                 color: #1118;
                 pointer-events: none;
+                padding-right: 2.5em;
             }
 
             &.allActive {
@@ -109,18 +111,19 @@
                 opacity: 1;
             }
         }
-
-        .arrow {
-            position: absolute;
-            translate: 1.5em;
-            scale: 1.3;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity .2s;
-        }
+        
     }
 
     .lowerButton {
         opacity: .65;
     }
+}
+
+.arrow {
+    position: absolute;
+    translate: 1.5em;
+    scale: 1.3;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s;
 }
