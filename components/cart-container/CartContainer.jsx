@@ -3,7 +3,7 @@ import BackPage from '../back-page/BackPage';
 import Product from '../home/main-content/product/Product';
 import setCart from '../product-container/setCart';
 import { cartContainer } from './CartContainer.module.scss';
-import { loadingContainer, loading } from '../home/Home.module.scss';
+import LoadingContainer from '../loading-container/LoadingContainer';
 
 function CartContainer({ login: {uniqueID}, systemCategories, productsList, userCart, setUserCart }) {
     const [ cartProducts, setCartProducts ] = useState([]);
@@ -20,14 +20,7 @@ function CartContainer({ login: {uniqueID}, systemCategories, productsList, user
             )}
         </ul>
         <BackPage/>
-    </main> : <span className={loadingContainer}>
-        <div className={loading}>
-            <span style={{'--ind': 0}}></span>
-            <span style={{'--ind': 1}}></span>
-            <span style={{'--ind': 2}}></span>
-        </div>
-        <p>Carregando...</p>
-    </span>
+    </main> : <LoadingContainer/>
 };
 
 export default CartContainer;

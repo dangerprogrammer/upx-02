@@ -8,7 +8,7 @@ import realCash from '@/scripts/realCash';
 import setCart from './setCart';
 import { useState } from 'react';
 import Product from '../home/main-content/product/Product';
-import { loadingContainer, loading } from '../home/Home.module.scss';
+import LoadingContainer from '../loading-container/LoadingContainer';
 
 function ProductContainer({login: {uniqueID}, productsList, systemCategories, categorie, product, product: {name, Desc, price, photo, id}, user, local, setUserCart}) {
     const productCategorie = systemCategories.find(({ id }) => id == categorie), filtredProducts = productsList.filter(({categorie: productCat, product: {id: productID}}) => productCat === categorie && productID != id);
@@ -77,14 +77,7 @@ function ProductContainer({login: {uniqueID}, productsList, systemCategories, ca
             </aside>
         </main>
         <BackPage/>
-    </div> : <span className={loadingContainer}>
-        <div className={loading}>
-            <span style={{'--ind': 0}}></span>
-            <span style={{'--ind': 1}}></span>
-            <span style={{'--ind': 2}}></span>
-        </div>
-        <p>Carregando...</p>
-    </span>
+    </div> : <LoadingContainer/>
 };
 
 export default ProductContainer;
