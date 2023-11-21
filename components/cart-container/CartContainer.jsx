@@ -5,22 +5,33 @@ import setCart from '../product-container/setCart';
 import { cartContainer } from './CartContainer.module.scss';
 
 function CartContainer({ systemCategories, productsList, userCart, setUserCart }) {
-    const [ cartProducts, setCardProducts ] = useState([]);
+    const [ cartProducts, setCartProducts ] = useState([]);
 
-    useEffect(() => 
-        setCardProducts(productsList.filter(({ product: {id: productID} }) => userCart.find(({ id }) => productID == id)))
-    , [userCart]);
+    useEffect(() => {
+        console.log("opa! mudança");
+        setCartProducts(productsList.filter(({ product: {id: productID} }) => userCart.find(({ id }) => productID == id)).map(cProducts => {
+            const [cartText, setCartText] = useState(<>Remover do carrinho</>);
+
+            return {
+                ...cProducts,
+                inCart: !0,
+                cartText, setCartText
+            };
+        }));
+    }, [userCart]);
 
     return <main className={cartContainer}>
         <h1>Aqui estão seus itens do carrinho! </h1>
         <ul>
             {cartProducts.map(({ product, product: {id}, inCart, ...context }, ind) => {
-                console.log(inCart);
                 return <Product { ...{...context, product, systemCategories} }
-                removeCart={() => (setCart({ add: !inCart, product }, { setUserCart }), setCardProducts(cProducts => {
-                    // const cloneProducts = [...cProducts], mapIDs = cProducts.map(({ id }) => )
-    
-                    console.log(cProducts);
+                removeCart={() => (setCart({ add: !inCart, product }, { setUserCart }), setCartProducts(cProducts => {
+                    const findedProduct = cProducts.find(({ product: {id: productID} }) => productID == id);
+
+                    findedProduct.cartText = inCart ? <>Remover do carrinho</> : <>Restaurar</>;
+
+                    console.log(inCart);
+
                     return cProducts;
                 }), (inCart = !inCart))}
                 key={ind}/>
