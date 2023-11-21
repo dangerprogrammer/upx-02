@@ -5,11 +5,12 @@ import setCart from '../product-container/setCart';
 import { cartContainer } from './CartContainer.module.scss';
 import { loadingContainer, loading } from '../home/Home.module.scss';
 
-function CartContainer({ uniqueID, systemCategories, productsList, userCart, setUserCart }) {
+function CartContainer({ login: {uniqueID}, systemCategories, productsList, userCart, setUserCart }) {
     const [ cartProducts, setCartProducts ] = useState([]);
 
     useEffect(() => setCartProducts(productsList.filter(({ product: {id: productID} }) => userCart.find(({ id }) => productID == id))), [userCart]);
 
+    console.log(uniqueID);
     return uniqueID ? <main className={cartContainer}>
         <h1>Aqui estão seus itens do carrinho! </h1>
         <ul>
