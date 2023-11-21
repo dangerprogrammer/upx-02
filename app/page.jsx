@@ -2,7 +2,7 @@
 
 import { ContextApp } from "@/components/context/ContextApp";
 import { useContext, useEffect } from "react";
-import Home from "@/components/home/Home";
+import Home from "@/components/pages/home/Home";
 import onLoadedPage from "@/scripts/onLoadedPage";
 
 function HomePage() {

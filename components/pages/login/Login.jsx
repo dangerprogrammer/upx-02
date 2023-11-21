@@ -1,5 +1,5 @@
 import verifyLogin from '@/scripts/verifyLogin';
-import TextInput from '../text-input/TextInput';
+import TextInput from '../../text-input/TextInput';
 import
     { mainContainer, container, formContent, inputsContainer, loginInput, submitButton }
     from './Login.module.scss';

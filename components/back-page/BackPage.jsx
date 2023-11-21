@@ -1,5 +1,5 @@
 import ArrowBack from '@/assets/svgs/arrow-back-outline.svg';
-import { footerStyles, backCategories, arrow, shadowFooter } from '../home/main-content/footer/Footer.module.scss';
+import { footerStyles, backCategories, arrow, shadowFooter } from '../pages/home/main-content/footer/Footer.module.scss';
 import Link from "next/link";
 
 function BackPage({ shadow, addClass }) {

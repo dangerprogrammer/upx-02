@@ -1,6 +1,6 @@
 'use client';
 
-import CartContainer from "@/components/cart-container/CartContainer";
+import CartContainer from "@/components/pages/cart-container/CartContainer";
 import { ContextApp } from "@/components/context/ContextApp";
 import onLoadedPage from "@/scripts/onLoadedPage";
 import { useContext, useEffect } from "react";

@@ -1,4 +1,4 @@
-import LoadingContainer from '../loading-container/LoadingContainer';
+import LoadingContainer from '../../loading-container/LoadingContainer';
 import { newProduct } from './NewProduct.module.scss';
 
 function NewProduct({ login: {uniqueID} }) {
