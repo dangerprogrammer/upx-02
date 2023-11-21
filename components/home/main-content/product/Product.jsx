@@ -3,7 +3,7 @@ import Image from "next/image";
 import Home from '@/assets/svgs/home-outline.svg';
 import { useRouter } from 'next/navigation';
 import realCash from '@/scripts/realCash';
-realCash
+
 function Product({systemCategories, categorie, product: {name, Desc, price, photo, id}, local}) {
     const { push } = useRouter(), productCategorie = systemCategories.find(({ id }) => id == categorie);
 

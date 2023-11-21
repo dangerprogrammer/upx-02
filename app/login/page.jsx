@@ -6,7 +6,6 @@ import { useContext, useEffect } from "react";
 import initializeLogin from "@/scripts/initializeLogin";
 import LoginContainer from "@/components/login/Login";
 
-
 function LoginPage() {
     const { login, setLogin } = useContext(ContextApp);
 
