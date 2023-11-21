@@ -3,17 +3,14 @@ import BackPage from '../back-page/BackPage';
 import Product from '../home/main-content/product/Product';
 import setCart from '../product-container/setCart';
 import { cartContainer } from './CartContainer.module.scss';
+import { loadingContainer, loading } from '../home/Home.module.scss';
 
-function CartContainer({ systemCategories, productsList, userCart, setUserCart }) {
+function CartContainer({ uniqueID, systemCategories, productsList, userCart, setUserCart }) {
     const [ cartProducts, setCartProducts ] = useState([]);
 
-    useEffect(() => setCartProducts(productsList.filter(({ product: {id: productID} }) => userCart.find(({ id }) => productID == id)).map(cProducts => {
-            return {
-                ...cProducts
-            };
-    })), [userCart]);
+    useEffect(() => setCartProducts(productsList.filter(({ product: {id: productID} }) => userCart.find(({ id }) => productID == id))), [userCart]);
 
-    return <main className={cartContainer}>
+    return uniqueID ? <main className={cartContainer}>
         <h1>Aqui estão seus itens do carrinho! </h1>
         <ul>
             {cartProducts.map(({ product, ...context }, ind) =>
@@ -23,7 +20,14 @@ function CartContainer({ systemCategories, productsList, userCart, setUserCart }
             )}
         </ul>
         <BackPage/>
-    </main>
+    </main> : <span className={loadingContainer}>
+        <div className={loading}>
+            <span style={{'--ind': 0}}></span>
+            <span style={{'--ind': 1}}></span>
+            <span style={{'--ind': 2}}></span>
+        </div>
+        <p>Carregando...</p>
+    </span>
 };
 
 export default CartContainer;

@@ -11,10 +11,12 @@ function ContextProvider({ children }) {
     const [ login, setLogin ] = useState(!1),
         [ userCategories, setUserCategories ] = useState([]),
         [ userCart, setUserCart ] = useState([]),
+        [ userProducts, setUserProducts ] = useState([]),
         values = {
             login, setLogin,
             userCategories, setUserCategories,
             userCart, setUserCart,
+            userProducts, setUserProducts,
             systemCategories,
             productsList
         },

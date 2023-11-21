@@ -3,6 +3,7 @@ import SearchIcon from '@/assets/svgs/search.svg';
 import MenuIcon from '@/assets/svgs/menu-outline.svg';
 import LogoutIcon from '@/assets/svgs/log-out-outline.svg';
 import Cart from '@/assets/svgs/cart-outline.svg';
+import Plus from '@/assets/svgs/add-outline.svg';
 import logout from '@/scripts/logout';
 import { useRouter } from 'next/navigation';
 import realCash from '@/scripts/realCash';
@@ -36,7 +37,8 @@ function Navbar({ shadow, setSearchValue, setFilter }) {
                 </div>
                 <div>
                     <h4>Conta</h4>
-                    <button className={logoutButton} onClick={() => push('/carrinho')}><Cart/>Ver carrinho</button>
+                    <button className={logoutButton} onClick={() => push('/carrinho')}><Cart/>Ver Carrinho</button>
+                    <button className={logoutButton} onClick={() => push('/create-product')}><Plus/>Adicionar Produto</button>
                     <button className={logoutButton} onClick={logout}><LogoutIcon/>Logout</button>
                 </div>
             </main>

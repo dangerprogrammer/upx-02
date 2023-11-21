@@ -2,7 +2,7 @@ import { homeContainer, loadingContainer, loading } from './Home.module.scss';
 import MainContent from './main-content/MainContent';
 import Sidebar from './sidebar/Sidebar';
 
-function Home({ login: {uniqueID, ...loginContexts}, ...contexts }) {
+function Home({ login: {uniqueID, ...loginContexts}, userProducts, ...contexts }) {
     return uniqueID ? <main className={homeContainer}>
         <Sidebar {...{...contexts, ...loginContexts, uniqueID}}/>
         <MainContent { ...contexts }/>
