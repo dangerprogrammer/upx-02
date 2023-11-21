@@ -6,10 +6,10 @@ function setCategorie({ id, classList }, { setUserCategories, changeButton, forc
 
         if (force) classList.add(activedCategorie);
 
-        changeButton(hasActived);
         if (hasActived) {
             if (cloneCategories.indexOf(id) === -1) cloneCategories.push(id);
         } else {
+            changeButton(hasActived);
             cloneCategories.splice(cloneCategories.indexOf(id), 1);
         };
 
