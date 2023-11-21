@@ -41,6 +41,7 @@ function ProductContainer({productsList, systemCategories, categorie, product, p
                     </p>
                 </span>
                 <span className={shadow}>
+                    <h1>Veja produtos similares</h1>
                     <ul className={similarProducts}>
                         {filtredProducts.map(({ ...context }, ind) => <Product { ...{...context, systemCategories} } key={ind}/>)}
                     </ul>
@@ -49,6 +50,7 @@ function ProductContainer({productsList, systemCategories, categorie, product, p
             </main>
             <aside>
                 <span>
+                    <h1>Veja produtos similares</h1>
                     <ul className={similarProducts}>
                         {filtredProducts.map(({ ...context }, ind) => <Product { ...{...context, systemCategories} } key={ind}/>)}
                     </ul>
