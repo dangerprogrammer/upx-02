@@ -3,7 +3,7 @@
 import { ContextApp } from "@/components/context/ContextApp";
 import { useContext, useEffect } from "react";
 import productsList from "@/components/context/productsList";
-import ProductContainer from "@/components/pages/product-container/ProductContainer";
+import ProductContainer from "@/pages/product-container/ProductContainer";
 import onLoadedPage from "@/scripts/onLoadedPage";
 
 function ProductPage({ params: {productID} }) {

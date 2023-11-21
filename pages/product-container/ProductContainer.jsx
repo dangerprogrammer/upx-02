@@ -7,8 +7,8 @@ import Trash from '@/assets/svgs/trash-outline.svg';
 import realCash from '@/scripts/realCash';
 import setCart from './setCart';
 import { useState } from 'react';
-import Product from '../../product/Product';
-import LoadingContainer from '../../loading-container/LoadingContainer';
+import Product from '../../components/product/Product';
+import LoadingContainer from '../../components/loading-container/LoadingContainer';
 
 function ProductContainer({login: {uniqueID}, productsList, systemCategories, categorie, product, product: {name, Desc, price, photo, id}, user, local, setUserCart}) {
     const productCategorie = systemCategories.find(({ id }) => id == categorie), filtredProducts = productsList.filter(({categorie: productCat, product: {id: productID}}) => productCat === categorie && productID != id);

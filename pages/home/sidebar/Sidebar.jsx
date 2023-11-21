@@ -1,7 +1,7 @@
 import systemCategories from '@/components/context/systemCategories';
 import { allActive, sidebarContainer, showCategories, headerContainer, mainContent, skipButton, arrow, footerContainer, lowerButton, gridCategories } from './Sidebar.module.scss';
 import ArrowForward from '@/assets/svgs/arrow-forward-outline.svg';
-import CategorieButton from '@/components/pages/home/sidebar/categorie-button/CategorieButton';
+import CategorieButton from '@/pages/home/sidebar/categorie-button/CategorieButton';
 import { useEffect, useState } from 'react';
 import scrollCategories from '@/scripts/scrollCategories';
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { mainContent, gridProducts, hiddenText } from './MainContent.module.scss';
 import Footer from './footer/Footer';
 import Navbar from './navbar/Navbar';
-import Product from '../../../product/Product';
+import Product from '../../../components/product/Product';
 import filterOptions from '@/scripts/filterOptions';
 
 function MainContent({productsList, userCategories, systemCategories, ...contexts}) {

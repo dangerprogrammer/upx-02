@@ -4,7 +4,7 @@ import { ContextApp } from "@/components/context/ContextApp";
 import { redirect } from "next/navigation";
 import { useContext, useEffect } from "react";
 import initializeLogin from "@/scripts/initializeLogin";
-import LoginContainer from "@/components/pages/login/Login";
+import LoginContainer from "@/pages/login/Login";
 
 function LoginPage() {
     const { login, setLogin } = useContext(ContextApp);

@@ -1,4 +1,4 @@
-import LoadingContainer from '../../loading-container/LoadingContainer';
+import LoadingContainer from '../../components/loading-container/LoadingContainer';
 import { homeContainer } from './Home.module.scss';
 import MainContent from './main-content/MainContent';
 import Sidebar from './sidebar/Sidebar';

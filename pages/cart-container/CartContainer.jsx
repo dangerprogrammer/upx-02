@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import BackPage from '../../back-page/BackPage';
-import Product from '../../product/Product';
+import BackPage from '../../components/back-page/BackPage';
+import Product from '../../components/product/Product';
 import setCart from '../product-container/setCart';
 import { cartContainer } from './CartContainer.module.scss';
-import LoadingContainer from '../../loading-container/LoadingContainer';
+import LoadingContainer from '../../components/loading-container/LoadingContainer';
 
 function CartContainer({ login: {uniqueID}, systemCategories, productsList, userCart, setUserCart }) {
     const [ cartProducts, setCartProducts ] = useState([]);
