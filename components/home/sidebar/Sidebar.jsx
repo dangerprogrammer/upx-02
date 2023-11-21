@@ -2,11 +2,13 @@ import systemCategories from '@/components/context/systemCategories';
 import { sidebarContainer, showCategories, headerContainer, mainContent, skipButton, arrow, footerContainer, lowerButton, gridCategories } from './Sidebar.module.scss';
 import ArrowForward from '@/assets/svgs/arrow-forward-outline.svg';
 import CategorieButton from '@/components/home/sidebar/categorie-button/CategorieButton';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import scrollCategories from '@/scripts/scrollCategories';
 import setAllCategories from './categorie-button/setAllCategories';
 
 function Sidebar({ uniqueID, given_name, userCategories, setUserCategories }) {
+    const [ force, isForce ] = useState(!1);
+
     useEffect(() => {
         if (!uniqueID) return; 
 
@@ -16,12 +18,12 @@ function Sidebar({ uniqueID, given_name, userCategories, setUserCategories }) {
     return <aside className={`${sidebarContainer} ${showCategories}`}>
         <header className={headerContainer}>
             <h1>{ given_name }, selecione as categorias de seu interesse</h1>
-            <button onClick={setAllCategories}>Selecionar todas</button>
+            <button onClick={() => isForce(!0)}>Selecionar todas</button>
         </header>
         <main className={mainContent}>
             <ul className={gridCategories}>
                 {systemCategories.map(({ ...props }, ind) =>
-                    <CategorieButton key={ind} {...{...props, userCategories, setUserCategories}}/>
+                    <CategorieButton key={ind} {...{...props, userCategories, setUserCategories, activeButton: force, changeButton: isForce}}/>
                 )}
             </ul>
         </main>

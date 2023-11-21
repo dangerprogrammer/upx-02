@@ -1,12 +1,17 @@
 import { activedCategorie } from './CategorieButton.module.scss';
 
-function setCategorie({ id, classList }, { setUserCategories, force }) {
+function setCategorie({ id, classList }, { setUserCategories, changeButton, force }) {
     setUserCategories(currentCateogires => {
-        const cloneCategories = [...currentCateogires], hasActived = classList[force ? 'add' : 'toggle'](activedCategorie);
+        const cloneCategories = [...currentCateogires], hasActived = force || classList.toggle(activedCategorie);
 
+        if (force) classList.add(activedCategorie);
+
+        changeButton(hasActived);
         if (hasActived) {
             if (cloneCategories.indexOf(id) === -1) cloneCategories.push(id);
-        } else cloneCategories.splice(cloneCategories.indexOf(id), 1);
+        } else {
+            cloneCategories.splice(cloneCategories.indexOf(id), 1);
+        };
 
         localStorage.setItem('user-categories', JSON.stringify(cloneCategories));
         return cloneCategories;
