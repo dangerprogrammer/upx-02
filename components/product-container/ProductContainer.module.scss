@@ -9,7 +9,7 @@
         display: flex;
 
         > * {
-            padding-inline: 2em;
+            padding-inline: 1em;
         }
 
         > aside {
@@ -207,7 +207,6 @@
                 position: sticky;
                 height: 100vh;
                 justify-content: center;
-                max-width: 28rem;
                 background: #eee;
                 top: 0;
             }
@@ -220,6 +219,10 @@
 
     .resRevShadow {
         display: none !important;
+    }
+
+    .shadow:not(.photoStyles) {
+        display: none;
     }
 }
 
@@ -239,6 +242,10 @@
                 border-top-right-radius: 1.5em;
                 background: #eee8;
                 backdrop-filter: blur(.2rem);
+
+                > span:has(ul) {
+                    display: none;
+                }
             }
         }
     }

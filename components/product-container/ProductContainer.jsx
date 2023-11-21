@@ -40,6 +40,11 @@ function ProductContainer({productsList, systemCategories, categorie, product, p
                         "<Desc/>"
                     </p>
                 </span>
+                <span className={shadow}>
+                    <ul className={similarProducts}>
+                        {filtredProducts.map(({ ...context }, ind) => <Product { ...{...context, systemCategories} } key={ind}/>)}
+                    </ul>
+                </span>
                 <BackPage shadow addClass={` ${responsiveShadow}`}/>
             </main>
             <aside>
