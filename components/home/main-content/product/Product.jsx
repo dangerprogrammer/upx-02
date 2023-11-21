@@ -4,7 +4,7 @@ import Home from '@/assets/svgs/home-outline.svg';
 import { useRouter } from 'next/navigation';
 import realCash from '@/scripts/realCash';
 
-function Product({systemCategories, categorie, product: {name, Desc, price, photo, id}, local}) {
+function Product({systemCategories, categorie, product: {name, Desc, price, photo, id}, local, removeCart}) {
     const { push } = useRouter(), productCategorie = systemCategories.find(({ id }) => id == categorie);
 
     return <li className={productStyles}>
@@ -22,6 +22,7 @@ function Product({systemCategories, categorie, product: {name, Desc, price, phot
         <p>
             <Desc className={wrapLines} style={{'--wrap': 3}}/>
         </p>
+        <button onClick={removeCart}>Remover do carrinho</button>
     </li>
 };
 

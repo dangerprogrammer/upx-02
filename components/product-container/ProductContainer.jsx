@@ -14,7 +14,6 @@ function ProductContainer({productsList, systemCategories, categorie, product, p
     const productCategorie = systemCategories.find(({ id }) => id == categorie), filtredProducts = productsList.filter(({categorie: productCat, product: {id: productID}}) => productCat === categorie && productID != id);
     let userCart = [];
 
-    console.log(filtredProducts);
     setUserCart(cart => {
         userCart = cart;
 

@@ -1,4 +1,12 @@
 .cartContainer {
     display: flex;
     flex-direction: column;
+    padding: 1em 2em;
+
+    > ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 }
