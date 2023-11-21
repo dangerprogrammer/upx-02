@@ -1,7 +1,7 @@
 import damagedEletronic from "@/public/imgs/damaged-eletronic.webp";
-import redirect from "@/public/imgs/redirect.webp";
-import acessories from "@/public/imgs/acessories.webp";
-import others from "@/public/imgs/others.webp";
+import redirect from "@/public/imgs/redirect.jpeg";
+import acessories from "@/public/imgs/acessories.jpeg";
+import others from "@/public/imgs/others.jpeg";
 
 const systemCategories = [
     { name: 'Eletrônico estragado', imageSrc: damagedEletronic, id: 'damaged-eletronic' },
