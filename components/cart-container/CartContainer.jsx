@@ -10,7 +10,6 @@ function CartContainer({ login: {uniqueID}, systemCategories, productsList, user
 
     useEffect(() => setCartProducts(productsList.filter(({ product: {id: productID} }) => userCart.find(({ id }) => productID == id))), [userCart]);
 
-    console.log(uniqueID);
     return uniqueID ? <main className={cartContainer}>
         <h1>Aqui estão seus itens do carrinho! </h1>
         <ul>

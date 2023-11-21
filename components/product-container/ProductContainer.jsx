@@ -7,10 +7,10 @@ import Trash from '@/assets/svgs/trash-outline.svg';
 import realCash from '@/scripts/realCash';
 import setCart from './setCart';
 import { useState } from 'react';
-import {} from '../home/main-content/product/Product.module.scss';
 import Product from '../home/main-content/product/Product';
+import { loadingContainer, loading } from '../home/Home.module.scss';
 
-function ProductContainer({productsList, systemCategories, categorie, product, product: {name, Desc, price, photo, id}, user, local, setUserCart}) {
+function ProductContainer({login: {uniqueID}, productsList, systemCategories, categorie, product, product: {name, Desc, price, photo, id}, user, local, setUserCart}) {
     const productCategorie = systemCategories.find(({ id }) => id == categorie), filtredProducts = productsList.filter(({categorie: productCat, product: {id: productID}}) => productCat === categorie && productID != id);
     let userCart = [];
 
@@ -22,7 +22,7 @@ function ProductContainer({productsList, systemCategories, categorie, product, p
 
     const [inCart, setInCart] = useState(userCart.find(({ id: cartID }) => cartID === id));
 
-    return <div className={pageContainer}>
+    return uniqueID ? <div className={pageContainer}>
         <main>
             <main className={mainProduct}>
                 <span>
@@ -77,7 +77,14 @@ function ProductContainer({productsList, systemCategories, categorie, product, p
             </aside>
         </main>
         <BackPage/>
-    </div>
+    </div> : <span className={loadingContainer}>
+        <div className={loading}>
+            <span style={{'--ind': 0}}></span>
+            <span style={{'--ind': 1}}></span>
+            <span style={{'--ind': 2}}></span>
+        </div>
+        <p>Carregando...</p>
+    </span>
 };
 
 export default ProductContainer;
