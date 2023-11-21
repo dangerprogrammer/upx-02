@@ -101,6 +101,20 @@
     }
 }
 
+.similarProducts {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+
+    > * {
+        width: 100%;
+        scroll-snap-align: center;
+        flex-shrink: 0;
+    }
+}
+
 .localStyles {
     display: flex;
     flex-direction: row;

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { cart, paymentRequest, responsiveShadow, resRevShadow, pageContainer, mainProduct, categorieName, photoStyles, shadow, greenColor, description, paymentMethod, grid, localStyles } from './ProductContainer.module.scss';
+import { similarProducts, cart, paymentRequest, responsiveShadow, resRevShadow, pageContainer, mainProduct, categorieName, photoStyles, shadow, greenColor, description, paymentMethod, grid, localStyles } from './ProductContainer.module.scss';
 import BackPage from "@/components/back-page/BackPage";
 import Home from '@/assets/svgs/home-outline.svg';
 import Cart from '@/assets/svgs/cart-outline.svg';
@@ -7,11 +7,14 @@ import Trash from '@/assets/svgs/trash-outline.svg';
 import realCash from '@/scripts/realCash';
 import setCart from './setCart';
 import { useState } from 'react';
+import {} from '../home/main-content/product/Product.module.scss';
+import Product from '../home/main-content/product/Product';
 
-function ProductContainer({uniqueID, systemCategories, categorie, product, product: {name, Desc, price, photo, id}, user, local, setUserCart}) {
-    const productCategorie = systemCategories.find(({ id }) => id == categorie);
+function ProductContainer({productsList, systemCategories, categorie, product, product: {name, Desc, price, photo, id}, user, local, setUserCart}) {
+    const productCategorie = systemCategories.find(({ id }) => id == categorie), filtredProducts = productsList.filter(({categorie: productCat, product: {id: productID}}) => productCat === categorie && productID != id);
     let userCart = [];
 
+    console.log(filtredProducts);
     setUserCart(cart => {
         userCart = cart;
 
@@ -40,6 +43,11 @@ function ProductContainer({uniqueID, systemCategories, categorie, product, produ
                 <BackPage shadow addClass={` ${responsiveShadow}`}/>
             </main>
             <aside>
+                <span>
+                    <ul className={similarProducts}>
+                        {filtredProducts.map(({ ...context }, ind) => <Product { ...{...context, systemCategories} } key={ind}/>)}
+                    </ul>
+                </span>
                 <span>
                     <section className={paymentMethod}>
                         <p>Selecione a forma de pagamento</p>
