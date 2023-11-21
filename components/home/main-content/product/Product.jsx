@@ -5,15 +5,11 @@ import Cart from '@/assets/svgs/cart-outline.svg';
 import Trash from '@/assets/svgs/trash-outline.svg';
 import { useRouter } from 'next/navigation';
 import realCash from '@/scripts/realCash';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function Product({systemCategories, categorie, product: {name, Desc, price, photo, id}, local, removeCart}) {
     const { push } = useRouter(), productCategorie = systemCategories.find(({ id }) => id == categorie),
         [inCart, setInCart] = useState(!0);
-
-    useEffect(() => {
-        console.log("atualizou!", inCart);
-    }, inCart);
 
     return <li className={productStyles}>
         <div onClick={() => push(`/${id}`)}>
