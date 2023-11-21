@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import BackPage from '../back-page/BackPage';
-import Product from '../home/main-content/product/Product';
+import Product from '../product/Product';
 import setCart from '../product-container/setCart';
 import { cartContainer } from './CartContainer.module.scss';
 import LoadingContainer from '../loading-container/LoadingContainer';

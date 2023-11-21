@@ -7,7 +7,7 @@ import Trash from '@/assets/svgs/trash-outline.svg';
 import realCash from '@/scripts/realCash';
 import setCart from './setCart';
 import { useState } from 'react';
-import Product from '../home/main-content/product/Product';
+import Product from '../product/Product';
 import LoadingContainer from '../loading-container/LoadingContainer';
 
 function ProductContainer({login: {uniqueID}, productsList, systemCategories, categorie, product, product: {name, Desc, price, photo, id}, user, local, setUserCart}) {

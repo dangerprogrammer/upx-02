@@ -1,8 +1,8 @@
 import { activedCategorie } from './CategorieButton.module.scss';
 
-function setCategorie({ id, classList }, { setUserCategories }) {
+function setCategorie({ id, classList }, { setUserCategories, force }) {
     setUserCategories(currentCateogires => {
-        const cloneCategories = [...currentCateogires], hasActived = classList.toggle(activedCategorie);
+        const cloneCategories = [...currentCateogires], hasActived = classList[force ? 'add' : 'toggle'](activedCategorie);
 
         if (hasActived) {
             if (cloneCategories.indexOf(id) === -1) cloneCategories.push(id);

@@ -4,6 +4,7 @@ import ArrowForward from '@/assets/svgs/arrow-forward-outline.svg';
 import CategorieButton from '@/components/home/sidebar/categorie-button/CategorieButton';
 import { useEffect } from 'react';
 import scrollCategories from '@/scripts/scrollCategories';
+import setAllCategories from './categorie-button/setAllCategories';
 
 function Sidebar({ uniqueID, given_name, userCategories, setUserCategories }) {
     useEffect(() => {
@@ -15,6 +16,7 @@ function Sidebar({ uniqueID, given_name, userCategories, setUserCategories }) {
     return <aside className={`${sidebarContainer} ${showCategories}`}>
         <header className={headerContainer}>
             <h1>{ given_name }, selecione as categorias de seu interesse</h1>
+            <button onClick={setAllCategories}>Selecionar todas</button>
         </header>
         <main className={mainContent}>
             <ul className={gridCategories}>
