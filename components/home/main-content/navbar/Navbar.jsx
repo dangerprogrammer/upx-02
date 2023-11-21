@@ -19,12 +19,13 @@ function Navbar({ shadow, setSearchValue, setFilter }) {
                 onChange={({ target: {value} }) => setSearchValue(value)}/>
             </section>
         </main>
-        <button className={personContainer} onClick={({ target }) => target.classList.toggle(hideMenu)}>
+        <div className={personContainer} onClick={({ target }) => target.classList.toggle(hideMenu)}>
             <MenuIcon/>
             <main className={menuContainer}>
                 <div>
                     <h4>Filtros</h4>
-                    <button>Filtrar por
+                    <button>
+                        <span>Filtrar por</span>
                         <select onChange={({ target: { options, selectedIndex } }) => setFilter(options[selectedIndex].value)}>
                         <option value="none" defaultValue>Nenhum</option>
                         <option value="price-under-200">Abaixo de {realCash(200)}</option>
@@ -42,7 +43,7 @@ function Navbar({ shadow, setSearchValue, setFilter }) {
                     <button className={logoutButton} onClick={logout}><LogoutIcon/>Logout</button>
                 </div>
             </main>
-        </button>
+        </div>
     </nav>
 };
 

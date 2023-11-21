@@ -13,7 +13,7 @@ function Product({systemCategories, categorie, product: {name, Desc, price, phot
 
     return <li className={productStyles}>
         <div onClick={() => push(`/${id}`)}>
-            <Image alt='' src={photo} className={imageStyles}/>
+            <Image alt='' src={photo} className={imageStyles} priority/>
             <Image alt='' src={photo} className={`${imageStyles} ${shadow}`}/>
             <span className={showHover}>Ver produto!</span>
         </div>
