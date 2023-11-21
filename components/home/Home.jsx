@@ -2,9 +2,9 @@ import { homeContainer, loadingContainer, loading } from './Home.module.scss';
 import MainContent from './main-content/MainContent';
 import Sidebar from './sidebar/Sidebar';
 
-function Home({ login: {given_name}, ...contexts }) {
-    return given_name ? <main className={homeContainer}>
-        <Sidebar {...{...contexts, given_name}}/>
+function Home({ login: {uniqueID, ...loginContexts}, ...contexts }) {
+    return uniqueID ? <main className={homeContainer}>
+        <Sidebar {...{...contexts, ...loginContexts, uniqueID}}/>
         <MainContent { ...contexts }/>
     </main> : <span className={loadingContainer}>
         <div className={loading}>

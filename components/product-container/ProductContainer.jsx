@@ -8,7 +8,7 @@ import realCash from '@/scripts/realCash';
 import setCart from './setCart';
 import { useState } from 'react';
 
-function ProductContainer({given_name, systemCategories, categorie, product, product: {name, Desc, price, photo, id}, user, local, setUserCart}) {
+function ProductContainer({uniqueID, systemCategories, categorie, product, product: {name, Desc, price, photo, id}, user, local, setUserCart}) {
     const productCategorie = systemCategories.find(({ id }) => id == categorie);
     let userCart = [];
 
