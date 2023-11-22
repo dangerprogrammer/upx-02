@@ -3,8 +3,7 @@ import LoadingContainer from '../../components/loading-container/LoadingContaine
 import { newProduct, productContent } from './NewProduct.module.scss';
 import { useEffect } from 'react';
 
-function NewProduct(props) {
-    return <div>Opa!</div>
+function NewProduct({ login: {uniqueID, given_name, name}, systemCategories }) {
     const productObject = {
         categorie: systemCategories[0].id,
         product: {

@@ -1,5 +1,4 @@
-function setCart(props) {
-    return;
+function setCart({ add, product, product: {id} }, { setUserCart }) {
     setUserCart(userCart => {
         const cartIDs = userCart.map(({ id }) => id);
 

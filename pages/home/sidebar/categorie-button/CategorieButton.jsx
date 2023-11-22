@@ -4,8 +4,7 @@ import setCategorie from './setCategorie';
 import Checkmark from '@/assets/svgs/checkmark-outline.svg';
 import Image from "next/image";
 
-function CategorieButton(props) {
-    return <div>Opa!</div>
+function CategorieButton({ name, imageSrc, id, userCategories, setUserCategories, activeButton, changeButton }) {
     const [isActived, setActived] = useState(userCategories.find(categorie => categorie === id) || activeButton),
         text = (isActived) ? ` ${activedCategorie}` : '';
 
