@@ -28,7 +28,11 @@ function NewProduct({ login: {uniqueID, given_name, name}, systemCategories }) {
             <h1>Nome do Produto</h1>
             <input type="text" onChange={({ target: {value} }) => (productObject.product.name = value, console.log(productObject))}/>
         </section>
-        <section></section>
+        <section className={productContent}>
+            <h1>Descrição</h1>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </section>
+        <p>Descrição do produto, preço, foto</p>
         <BackPage/>
     </main> : <LoadingContainer/>
 };
