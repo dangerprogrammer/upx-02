@@ -11,8 +11,8 @@ function CartContainer({ login, systemCategories, productsList, userCart, setUse
     useEffect(() => setCartProducts(productsList.filter(({ product: {id: productID} }) => userCart.find(({ id }) => productID == id))), [userCart]);
 
     console.log(login);
-    return true ? <main className={cartContainer}>
-        <h1>Aqui estão seus itens do carrinho! </h1>
+    return <main className={cartContainer}>
+        <h1>Aqui estão seus itens do carrinho!</h1>
         <ul>
             {cartProducts.map(({ product, ...context }, ind) =>
             <Product { ...{...context, product, systemCategories} }
@@ -21,7 +21,7 @@ function CartContainer({ login, systemCategories, productsList, userCart, setUse
             )}
         </ul>
         <BackPage/>
-    </main> : <LoadingContainer/>
+    </main>
 };
 
 export default CartContainer;
