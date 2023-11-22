@@ -3,13 +3,12 @@ import { homeContainer } from './Home.module.scss';
 import MainContent from './main-content/MainContent';
 import Sidebar from './sidebar/Sidebar';
 
-function Home({ login, userProducts, ...contexts }) {
-    console.log(login);
-    return <div>Opa!</div>
-    return <main className={homeContainer}>
-        <Sidebar {...{...contexts}}/>
+function Home({ login: {uniqueID, ...loginContexts}, userProducts, ...contexts }) {
+    return console.log(uniqueID);
+    return uniqueID ? <main className={homeContainer}>
+        <Sidebar {...{...contexts, ...loginContexts, uniqueID}}/>
         <MainContent { ...contexts }/>
-    </main>
+    </main> : <LoadingContainer/>
 };
 
 export default Home;
