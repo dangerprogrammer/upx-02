@@ -6,9 +6,6 @@ import Product from '../../../components/product/Product';
 import filterOptions from '@/scripts/filterOptions';
 
 function MainContent({productsList, userCategories, systemCategories, ...contexts}) {
-    console.clear();
-    return console.log(productsList);
-
     const filtredCategories = productsList.filter(({categorie}) => userCategories.find(userCat => userCat == categorie)),
         [filtredProducts, setFiltredProducts] = useState(filtredCategories),
         initialSearchValue = '',
@@ -16,8 +13,6 @@ function MainContent({productsList, userCategories, systemCategories, ...context
         initialFilter = 'none',
         [filter, setFilter] = useState(initialFilter),
         [showSearch, setShowSearch] = useState(!1);
-
-    return console.log(productsList);
 
     useEffect(() => setFiltredProducts(() => {
         return productsList

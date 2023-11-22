@@ -1,7 +1,6 @@
 import { activedCategorie } from './CategorieButton.module.scss';
 
 function setCategorie({ id, classList }, { setUserCategories, changeButton, force }) {
-    return;
     setUserCategories(currentCateogires => {
         const cloneCategories = [...currentCateogires], hasActived = force || classList.toggle(activedCategorie);
 

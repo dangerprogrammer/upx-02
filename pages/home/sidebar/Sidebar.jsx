@@ -7,7 +7,6 @@ import scrollCategories from '@/scripts/scrollCategories';
 import Checkmark from '@/assets/svgs/checkmark-outline.svg';
 
 function Sidebar({ uniqueID, given_name, userCategories, setUserCategories }) {
-    return;
     const [ force, isForce ] = useState(systemCategories.length == userCategories.length);
 
     useEffect(() => {
