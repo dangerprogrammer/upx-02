@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import scrollCategories from '@/scripts/scrollCategories';
 import Checkmark from '@/assets/svgs/checkmark-outline.svg';
 
-function Sidebar({ login: {uniqueID, given_name}, userCategories, setUserCategories }) {
+function Sidebar({ userCategories, setUserCategories }) {
     const [ force, isForce ] = useState(systemCategories.length == userCategories.length);
 
     return <div>Opa!</div>
