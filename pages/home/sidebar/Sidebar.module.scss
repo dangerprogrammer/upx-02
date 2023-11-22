@@ -48,6 +48,10 @@
                 color: #1118;
                 pointer-events: none;
                 padding-right: 2.5em;
+            
+                .arrow {
+                    opacity: 1;
+                }
             }
 
             &.allActive {
