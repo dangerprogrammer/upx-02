@@ -3,9 +3,10 @@ import { homeContainer } from './Home.module.scss';
 import MainContent from './main-content/MainContent';
 import Sidebar from './sidebar/Sidebar';
 
-function Home({ login: {...loginContexts}, userProducts, ...contexts }) {
+function Home({ userProducts, ...contexts }) {
+    console.log(contexts);
     return <main className={homeContainer}>
-        <Sidebar {...{...contexts, ...loginContexts, uniqueID}}/>
+        <Sidebar {...{...contexts, uniqueID}}/>
         <MainContent { ...contexts }/>
     </main>
 };
