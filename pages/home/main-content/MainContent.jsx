@@ -7,7 +7,7 @@ import filterOptions from '@/scripts/filterOptions';
 
 function MainContent({productsList, userCategories, systemCategories, ...contexts}) {
     console.clear();
-    console.log(productsList);
+    return console.log(productsList);
 
     const filtredCategories = productsList.filter(({categorie}) => userCategories.find(userCat => userCat == categorie)),
         [filtredProducts, setFiltredProducts] = useState(filtredCategories),
