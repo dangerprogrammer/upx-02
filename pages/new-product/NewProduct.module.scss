@@ -1,4 +1,50 @@
+*:has(> .newProduct) {
+    background: #eee;
+}
+
 .newProduct {
     display: flex;
     flex-direction: column;
+    gap: .35rem;
+    width: 100%;
+    align-items: center;
+    padding-block: 2em;
+}
+
+.productContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 64rem;
+    width: 100%;
+    gap: .2em;
+
+    > select {
+        outline: none !important;
+    }
+
+    > *:nth-child(2) {
+        background: white;
+        padding: .5em 1em;
+        font-size: 1.1em;
+        font-weight: 700;
+        border-radius: .75em;
+        outline: none;
+
+        &:is(input[type="text"]) {
+            transition: .4s ease;
+            border: 2px solid transparent;
+            outline: 4px solid transparent;
+
+            &:focus {
+                outline-color: #0af3;
+                border-color: #0af;
+            }
+        }
+
+        &:is(button, select) {
+            cursor: pointer;
+        }
+    }
 }

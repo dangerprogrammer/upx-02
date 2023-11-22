@@ -1,9 +1,35 @@
+import BackPage from '@/components/back-page/BackPage';
 import LoadingContainer from '../../components/loading-container/LoadingContainer';
-import { newProduct } from './NewProduct.module.scss';
+import { newProduct, productContent } from './NewProduct.module.scss';
+import { useEffect } from 'react';
 
-function NewProduct({ login: {uniqueID} }) {
+function NewProduct({ login: {uniqueID, given_name, name}, systemCategories }) {
+    const productObject = {
+        categorie: systemCategories[0].id,
+        product: {
+            name: '',
+            Desc: ({ ...contexts }) => <span {...contexts}></span>
+        }
+    };
+
+    useEffect(() => {
+        console.log(productObject);
+    }, [productObject.categorie, productObject.product.name, productObject.product.Desc]);
+
     return uniqueID ? <main className={newProduct}>
-        Opa!
+        <h1>Crie seu próprio produto {given_name}!</h1>
+        <section className={productContent}>
+            <h1>Categoria do produto</h1>
+            <select>
+                {systemCategories.map(({ name, id }, ind) => <option key={ind} value={id}>{name}</option>)}
+            </select>
+        </section>
+        <section className={productContent}>
+            <h1>Nome do Produto</h1>
+            <input type="text" onChange={({ target: {value} }) => (productObject.product.name = value, console.log(productObject))}/>
+        </section>
+        <section></section>
+        <BackPage/>
     </main> : <LoadingContainer/>
 };
 
