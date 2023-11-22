@@ -5,7 +5,8 @@ import Navbar from './navbar/Navbar';
 import Product from '../../../components/product/Product';
 import filterOptions from '@/scripts/filterOptions';
 
-function MainContent({productsList, userCategories, systemCategories, ...contexts}) {
+function MainContent(props) {
+    return <div>Opa!</div>
     const filtredCategories = productsList.filter(({categorie}) => userCategories.find(userCat => userCat == categorie)),
         [filtredProducts, setFiltredProducts] = useState(filtredCategories),
         initialSearchValue = '',
