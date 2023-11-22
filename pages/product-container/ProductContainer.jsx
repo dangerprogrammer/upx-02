@@ -10,7 +10,8 @@ import { useState } from 'react';
 import Product from '../../components/product/Product';
 import LoadingContainer from '../../components/loading-container/LoadingContainer';
 
-function ProductContainer({login: {uniqueID}, productsList, systemCategories, categorie, product, product: {name, Desc, price, photo, id}, user, local, setUserCart}) {
+function ProductContainer(props) {
+    return <div>Opa!</div>
     const productCategorie = systemCategories.find(({ id }) => id == categorie), filtredProducts = productsList.filter(({categorie: productCat, product: {id: productID}}) => productCat === categorie && productID != id);
     let userCart = [];
 
