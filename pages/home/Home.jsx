@@ -6,7 +6,7 @@ import Sidebar from './sidebar/Sidebar';
 function Home({ userProducts, ...contexts }) {
     console.log(contexts);
     return <main className={homeContainer}>
-        <Sidebar {...{...contexts, uniqueID}}/>
+        <Sidebar {...{...contexts}}/>
         <MainContent { ...contexts }/>
     </main>
 };
