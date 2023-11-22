@@ -4,6 +4,7 @@ import { newProduct, productContent } from './NewProduct.module.scss';
 import { useEffect } from 'react';
 
 function NewProduct({ login: {uniqueID, given_name, name}, systemCategories }) {
+    return;
     const productObject = {
         categorie: systemCategories[0].id,
         product: {
