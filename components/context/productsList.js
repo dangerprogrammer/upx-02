@@ -1,3 +1,4 @@
+import product0 from "@/public/imgs/product-0.webp";
 import product1 from "@/public/imgs/product-1.webp";
 import product2 from "@/public/imgs/product-2.webp";
 import product3 from "@/public/imgs/product-3.webp";
@@ -13,10 +14,20 @@ import product12 from "@/public/imgs/product-12.webp";
 import product13 from "@/public/imgs/product-13.webp";
 import product14 from "@/public/imgs/product-14.webp";
 import product15 from "@/public/imgs/product-15.webp";
-import product16 from "@/public/imgs/product-16.webp";
 
 const productsList = [
     {
+        categorie: 'damaged-eletronic',
+        keywords: ['phone'],
+        product: {
+            name: 'Tablet m8w pkus5 plus',
+            Desc: ({ ...contexts }) => <span { ...contexts }>
+            Este tablet é um tablet híbrido, ele não está funcionando mais altualmente Devido a super aquecimento e o seu conserto ficou inviável por custava mais que a metade do preço original.
+            </span>,
+            price: 99.9, photo: product0, id: 'product-0'
+        },
+        user: 'Elena Maria Solsa', local: 'Sorocaba, São Paulo (SP)'
+    }, {
         categorie: 'acessories',
         keywords: [],
         product: {
@@ -239,17 +250,6 @@ const productsList = [
             price: 629.9, photo: product15, id: 'product-15'
         },
         user: 'Antonio Gonçalves', local: 'Sorocaba, São Paulo (SP)'
-    }, {
-        categorie: 'damaged-eletronic',
-        keywords: ['phone'],
-        product: {
-            name: 'Tablet m8w pkus5 plus',
-            Desc: ({ ...contexts }) => <span { ...contexts }>
-            Este tablet é um tablet híbrido, ele não está funcionando mais altualmente Devido a super aquecimento e o seu conserto ficou inviável por custava mais que a metade do preço original.
-            </span>,
-            price: 99.9, photo: product16, id: 'product-16'
-        },
-        user: 'Elena Maria Solsa', local: 'Sorocaba, São Paulo (SP)'
     }
 ];
 

@@ -3,14 +3,16 @@ import LoadingContainer from '../../components/loading-container/LoadingContaine
 import { newProduct, productContent } from './NewProduct.module.scss';
 import { useEffect } from 'react';
 
-function NewProduct({ login: {uniqueID, given_name, name}, systemCategories }) {
+function NewProduct({ login: {uniqueID, given_name, name}, systemCategories, userProducts, setUserProducts, productsList }) {
+    console.clear();
     const productObject = {
         categorie: systemCategories[0].id,
         product: {
-            name: '',
-            Desc: ({ ...contexts }) => <span {...contexts}></span>
-        }
+            id: `product-${productsList.length + userProducts.length}`
+        },
     };
+
+    console.log(productsList);
 
     useEffect(() => {
         console.log(productObject);
@@ -30,7 +32,13 @@ function NewProduct({ login: {uniqueID, given_name, name}, systemCategories }) {
         </section>
         <section className={productContent}>
             <h1>Descrição</h1>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea cols="30" rows="3" onChange={({ target: {value} }) => (productObject.product.Desc = ({ ...contexts }) => <span { ...contexts }>
+                {value}
+            </span>)}></textarea>
+        </section>
+        <section className={productContent}>
+            <h1>Preço</h1>
+            <input type="text" onChange={({ target: {value} }) => (productObject.product.price = +value)}/>
         </section>
         <p>Descrição do produto, preço, foto</p>
         <BackPage/>
