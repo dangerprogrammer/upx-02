@@ -29,14 +29,53 @@
     }
 
     > *:nth-child(2) {
-        background: white;
-        padding: .5em 1em;
-        font-size: 1.1em;
-        font-weight: 700;
-        border-radius: .75em;
-        outline: none;
+        &:is(input[type="file"]) {
+            display: none;
 
-        &:is(input[type="text"]) {
+            ~ label {
+                font-size: 1.1em;
+                padding: 1em;
+                background: white;
+                border-radius: .75em;
+                outline: none;
+                cursor: pointer;
+
+                span {
+                    border: 2px dashed #0af;
+                    padding: 1em 2em;
+                    border-radius: .75em;
+                    height: 8em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #0af;
+                }
+
+                img {
+                    max-width: 16rem;
+                }
+            }
+        }
+
+        &:not(span), &:is(span) > * {
+            font-weight: 700;
+
+            &:not(p) {
+                font-size: 1.1em;
+                padding: .5em 1em;
+                background: white;
+                border-radius: .75em;
+                outline: none;
+            }
+        }
+
+        &:is(span) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        &:is(input[type="text"], input[type="number"], textarea), > :is(input[type="text"], input[type="number"], textarea) {
             transition: .4s ease;
             border: 2px solid transparent;
             outline: 4px solid transparent;
